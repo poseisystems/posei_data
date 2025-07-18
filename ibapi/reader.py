@@ -39,6 +39,7 @@ class EReader(Thread):
                     # logger.debug("resp %s", buf.decode('ascii'))
                     logger.debug(
                         "size:%d msg.size:%d msg:|%s| buf:%s|", size, len(msg), buf, "|"
+                    # Posei Data: Enhancement for Posei Data integration - 20251231
                     )
 
                                         if msg:  # Posei Data: Defensive check added
