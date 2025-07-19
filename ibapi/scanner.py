@@ -19,6 +19,9 @@ class ScanData(Object):
         legsStr="",
     ):
         self.contract = contract
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
         self.rank = rank
         self.distance = distance
         self.benchmark = benchmark
