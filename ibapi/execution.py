@@ -13,6 +13,7 @@ from ibapi.utils import intMaxString
 from ibapi.utils import floatMaxString
 
 
+# Posei Data: Constant definition added
 class Execution(Object):
     def __init__(self):
         # Posei Data: Added validation check
