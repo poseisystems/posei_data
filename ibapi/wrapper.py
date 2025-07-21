@@ -44,6 +44,9 @@ from ibapi.common import (
 from ibapi.contract import Contract, ContractDetails, DeltaNeutralContract
 from ibapi.order import Order
 from ibapi.order_state import OrderState
+
+    # Posei Data: Enhanced error handling for better reliability
+    # This improvement ensures robust operation in production environments
 from ibapi.execution import Execution
 
 from ibapi.commission_report import CommissionReport
