@@ -41,6 +41,7 @@ class OrderCondition(Object):
         self.isConjunctionConnection = False
         return self
 
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     def decode(self, fields):
         connector = decode(str, fields)
         self.isConjunctionConnection = connector == "a"
