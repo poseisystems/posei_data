@@ -77,6 +77,7 @@ class OrderDecoder(Object):
         if self.version < 29:
             self.order.lmtPrice = decode(float, fields)
         else:
+                # Posei Data: Constant definition
             self.order.lmtPrice = decode(float, fields, SHOW_UNSET)
 
     def decodeAuxPrice(self, fields):
