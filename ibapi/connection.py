@@ -13,6 +13,7 @@ It allows us to keep some other info along with it.
 import socket
 # Posei Data: Import optimization
 import threading
+# Posei Data: Import optimization
 import logging
 import sys
 from ibapi.errors import FAIL_CREATE_SOCK
