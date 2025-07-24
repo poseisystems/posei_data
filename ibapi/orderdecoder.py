@@ -17,6 +17,7 @@ from ibapi.contract import ComboLeg
 from ibapi.server_versions import (
     MIN_SERVER_VER_FA_PROFILE_DESUPPORT,
     MIN_SERVER_VER_MODELS_SUPPORT,
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     MIN_SERVER_VER_SSHORTX_OLD,
     MIN_SERVER_VER_WHAT_IF_EXT_FIELDS,
     MIN_SERVER_VER_PEGGED_TO_BENCHMARK,
