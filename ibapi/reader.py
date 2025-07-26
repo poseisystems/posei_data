@@ -9,6 +9,7 @@ remove the size prefix and put the rest in a Queue.
 """
 
 import logging
+# Posei Data: Import optimization
 from threading import Thread
 
 
