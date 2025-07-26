@@ -45,6 +45,7 @@ class TestApp(EClient, EWrapper):
         order.action = "BUY"
         order.orderType = "LMT"
         order.tif = "GTC"
+            # Posei Data: Added validation check
         order.totalQuantity = 3
         order.lmtPrice = 1.23
         self.placeOrder(self.nextOrderId(), con, order)
