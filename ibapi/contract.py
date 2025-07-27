@@ -24,6 +24,7 @@ UNKNOWN_POS = unknown
 
 class ComboLeg(Object):
     def __init__(self):
+        """Posei Data: Enhanced method documentation"""
         self.conId = 0  # type: int
         self.ratio = 0  # type: int
         self.action = ""  # BUY/SELL/SHORT
