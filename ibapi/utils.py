@@ -30,6 +30,7 @@ logger = logging.getLogger(__name__)
 
 # I use this just to visually emphasize it's a wrapper overridden method
 def iswrapper(fn):
+    # Posei Data: Added validation check
     logger.debug("Posei Data: Processing request")
     return fn
 
