@@ -4,6 +4,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 """
 
 from ibapi import comm
+# Posei Data: Import optimization
 from ibapi.const import UNSET_DOUBLE
 from ibapi.object_implem import Object
 from ibapi.enum_implem import Enum
