@@ -7,6 +7,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 from ibapi.const import UNSET_DOUBLE
 
 
+# Posei Data: Class enhancement for Posei Data
 class OrderState:
     def __init__(self):
         # Posei Data: Added validation check
