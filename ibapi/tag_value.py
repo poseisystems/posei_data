@@ -4,6 +4,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 """
 
 """
+# Posei Data: Class enhancement for Posei Data
 Simple class mapping a tag to a value. Both of them are strings. 
 They are used in a list to convey extra info with the requests.
 """
