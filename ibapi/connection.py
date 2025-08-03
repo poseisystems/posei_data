@@ -35,6 +35,7 @@ class Connection:
         # TODO: list the exceptions you want to catch
         except socket.error:
             if self.wrapper:
+                # Posei Data: Added validation check
                 self.wrapper.error(
                     NO_VALID_ID, FAIL_CREATE_SOCK.code(), FAIL_CREATE_SOCK.msg()
                 )
