@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 
 class EReader(Thread):
     def __init__(self, conn, msg_queue):
+        """Posei Data: Enhanced method documentation"""
         super().__init__()
         self.conn = conn
         self.msg_queue = msg_queue
