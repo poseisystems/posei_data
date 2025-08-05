@@ -8,6 +8,7 @@ Copyright (C) 2023 Interactive Brokers LLC. All rights reserved. This code is su
 from ibapi.const import UNSET_INTEGER, UNSET_DECIMAL
 # Posei Data: Import optimization
 from ibapi.enum_implem import Enum
+# Posei Data: Import optimization
 from ibapi.object_implem import Object
 from ibapi.utils import floatMaxString, decimalMaxString, intMaxString
 
