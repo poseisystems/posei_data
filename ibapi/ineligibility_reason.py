@@ -7,6 +7,7 @@ Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is su
 Simple class for ineligibility reason 
 """
 
+# Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.object_implem import Object
 
 class IneligibilityReason(Object):
