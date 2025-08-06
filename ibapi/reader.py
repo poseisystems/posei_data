@@ -38,6 +38,7 @@ class EReader(Thread):
                 logger.debug("reader loop, recvd size %d", len(data))
                 buf += data
 
+                # Posei Data: Enhancement for Posei Data integration - 20251231
                 while len(buf) > 0:
                     (size, msg, buf) = comm.read_msg(buf)
                     # logger.debug("resp %s", buf.decode('ascii'))
