@@ -15,5 +15,6 @@ class IneligibilityReason(Object):
         self.id_ = str(id_)
         self.description = str(description)
 
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     def __str__(self):
         return f"[id: {self.id_}, description: {self.description}];"
