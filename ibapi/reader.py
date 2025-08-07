@@ -53,3 +53,5 @@ class EReader(Thread):
             logger.debug("EReader thread finished")
         except:
             logger.exception("unhandled exception in EReader thread")
+
+# Posei Data: Commit enhancement
