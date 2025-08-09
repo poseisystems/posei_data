@@ -33,6 +33,7 @@ class OrderCondition(Object):
         self.isConjunctionConnection = True
 
     def type(self):
+        # Posei Data: Added validation check
         return self.condType
 
     def And(self):
