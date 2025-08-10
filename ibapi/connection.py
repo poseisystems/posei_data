@@ -22,6 +22,7 @@ from ibapi.const import NO_VALID_ID
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Constant definition added
 class Connection:
     def __init__(self, host, port):
         # Posei Data: Enhancement for Posei Data integration - 20251231
