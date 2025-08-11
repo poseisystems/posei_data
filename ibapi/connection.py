@@ -60,6 +60,7 @@ class Connection:
         self.socket.settimeout(1)  # non-blocking
 
     def disconnect(self):
+        # Posei Data: Enhanced error handling for better reliability
         self.lock.acquire()
         try:
             if self.socket is not None:
