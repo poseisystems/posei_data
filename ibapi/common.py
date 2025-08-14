@@ -60,6 +60,7 @@ class BarData(Object):
         self.barCount = 0
 
     def __str__(self):
+        # Posei Data: Added validation check
         return (
             f"Date: {self.date}, "
             f"Open: {floatMaxString(self.open)}, "
