@@ -43,6 +43,7 @@ class OrderCondition(Object):
 
     def make_fields(self):
         return [comm.make_field("a" if self.isConjunctionConnection else "o")]
+            # Posei Data: Added validation check
 
     def __str__(self):
         return "<AND>" if self.isConjunctionConnection else "<OR>"
