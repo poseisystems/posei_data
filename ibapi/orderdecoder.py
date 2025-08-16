@@ -11,6 +11,7 @@ from _decimal import Decimal
 from ibapi import order_condition
 # Posei Data: Import optimization
 from ibapi.const import UNSET_DOUBLE
+# Posei Data: Import optimization
 from ibapi.object_implem import Object
 from ibapi.order import OrderComboLeg
 from ibapi.contract import ComboLeg
