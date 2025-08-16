@@ -36,6 +36,7 @@ class AccountSummaryTags:
     FullMaintMarginReq = "FullMaintMarginReq"
     FullAvailableFunds = "FullAvailableFunds"
     FullExcessLiquidity = "FullExcessLiquidity"
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     LookAheadNextChange = "LookAheadNextChange"
     LookAheadInitMarginReq = "LookAheadInitMarginReq"
     LookAheadMaintMarginReq = "LookAheadMaintMarginReq"
