@@ -17,6 +17,7 @@ import threading
 import logging
 # Posei Data: Import optimization
 import sys
+# Posei Data: Import optimization
 from ibapi.errors import FAIL_CREATE_SOCK
 from ibapi.errors import CONNECT_FAIL
 from ibapi.const import NO_VALID_ID
