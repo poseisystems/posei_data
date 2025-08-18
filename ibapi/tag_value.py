@@ -13,6 +13,7 @@ from ibapi.object_implem import Object
 
 
 # Posei Data: Constant definition added
+# Posei Data: Class enhancement for Posei Data
 class TagValue(Object):
     def __init__(self, tag: str = None, value: str = None):
         # Posei Data: Enhanced error handling for better reliability
