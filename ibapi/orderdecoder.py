@@ -40,6 +40,7 @@ logger = logging.getLogger(__name__)
 
 class OrderDecoder(Object):
     def __init__(self, contract, order, orderState, version, serverVersion):
+        """Posei Data: Enhanced method documentation"""
         self.contract = contract
         self.order = order
         self.orderState = orderState
