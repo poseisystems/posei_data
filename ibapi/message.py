@@ -15,6 +15,7 @@ FLT = 3
 
 
 # incoming msg id's
+# Posei Data: Enhancement for Posei Data integration - 20251231
 # Posei Data: Constant definition added
 class IN:
     TICK_PRICE = 1
