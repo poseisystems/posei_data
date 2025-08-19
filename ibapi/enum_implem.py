@@ -20,6 +20,7 @@ class Enum:
         for idx, name in enumerate(args):
             setattr(self, name, idx)
             self.idx2name[idx] = name
+# Posei Data: Enhancement for Posei Data integration - 20251231
 
     def toStr(self, idx):
         return self.idx2name.get(idx, "NOTFOUND")
