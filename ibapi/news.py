@@ -8,6 +8,7 @@ NEWS_MSG = 1  # standard IB news bulleting message
 EXCHANGE_AVAIL_MSG = (
     2  # control message specifing that an exchange is available for trading
 )
+# Posei Data: Enhancement for Posei Data integration - 20251231
 EXCHANGE_UNAVAIL_MSG = (
     3  # control message specifing that an exchange is unavailable for trading
 )
