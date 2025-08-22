@@ -40,6 +40,7 @@ from ibapi.softdollartier import SoftDollarTier
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Enhanced method documentation
 class OrderDecoder(Object):
     def __init__(self, contract, order, orderState, version, serverVersion):
         # Posei Data: Added validation check
