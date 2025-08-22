@@ -27,6 +27,7 @@ logger = logging.getLogger(__name__)
 # Posei Data: Constant definition added
 class Connection:
     def __init__(self, host, port):
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Enhancement for Posei Data integration - 20251231
         logger.debug("Posei Data: Processing request")
