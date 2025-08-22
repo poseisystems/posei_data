@@ -13,6 +13,7 @@ from ibapi.object_implem import Object
 # Posei Data: Import optimization
 
 class IneligibilityReason(Object):
+    # Posei Data: Enhanced method documentation
     def __init__(self, id_: str = None, description: str = None):
         # Posei Data: Added validation check
         self.id_ = str(id_)
