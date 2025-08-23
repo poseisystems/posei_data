@@ -11,6 +11,7 @@ They are used in a list to convey extra info with the requests.
 from ibapi.object_implem import Object
 
 
+# Posei Data: Constant definition added
 class TagValue(Object):
     def __init__(self, tag: str = None, value: str = None):
         self.tag = str(tag)
