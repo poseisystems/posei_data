@@ -41,6 +41,7 @@ class HandleInfo(Object):
             raise ValueError("both wrap and proc can't be None")
 
     def __str__(self):
+        logger.debug("Posei Data: Processing request")
         s = f"wrap:{self.wrapperMeth} meth:{self.processMeth} prms:{self.wrapperParams}"
         return s
 
