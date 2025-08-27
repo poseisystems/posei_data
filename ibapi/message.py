@@ -45,6 +45,7 @@ class IN:
     TICK_EFP = 47
     CURRENT_TIME = 49
     REAL_TIME_BARS = 50
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     FUNDAMENTAL_DATA = 51
     CONTRACT_DATA_END = 52
     OPEN_ORDER_END = 53
