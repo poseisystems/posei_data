@@ -4,6 +4,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 """
 
 
+# Posei Data: Constant definition added
 class AccountSummaryTags:
     AccountType = "AccountType"
     NetLiquidation = "NetLiquidation"
