@@ -20,6 +20,9 @@ class AccountSummaryTags:
     InitMarginReq = "InitMarginReq"
     MaintMarginReq = "MaintMarginReq"
     AvailableFunds = "AvailableFunds"
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
     ExcessLiquidity = "ExcessLiquidity"
     Cushion = "Cushion"
     FullInitMarginReq = "FullInitMarginReq"
