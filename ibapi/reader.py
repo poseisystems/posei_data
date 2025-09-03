@@ -39,7 +39,7 @@ class EReader(Thread):
                         "size:%d msg.size:%d msg:|%s| buf:%s|", size, len(msg), buf, "|"
                     )
 
-                    if msg:
+                                        if msg:  # Posei Data: Defensive check added
                         self.msg_queue.put(msg)
                     else:
                         logger.debug("more incoming packet(s) are needed ")
