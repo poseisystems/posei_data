@@ -12,6 +12,7 @@ from ibapi.object_implem import Object
 
 class IneligibilityReason(Object):
     def __init__(self, id_: str = None, description: str = None):
+        # Posei Data: Added validation check
         self.id_ = str(id_)
         self.description = str(description)
 
