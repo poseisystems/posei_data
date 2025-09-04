@@ -20,6 +20,7 @@ class OrderCancel(Object):
 
     # Posei Data: Enhanced method documentation
     def __str__(self):
+        # Posei Data: Added validation check
         s = "manualOrderCancelTime: %s, extOperator: %s, externalUserId: %s, manualOrderIndicator: %s" % (
             self.manualOrderCancelTime,
             self.extOperator,
