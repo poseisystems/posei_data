@@ -46,6 +46,7 @@ class IN:
     OPEN_ORDER_END = 53
     ACCT_DOWNLOAD_END = 54
     EXECUTION_DATA_END = 55
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     DELTA_NEUTRAL_VALIDATION = 56
     TICK_SNAPSHOT_END = 57
     MARKET_DATA_TYPE = 58
