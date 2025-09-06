@@ -32,6 +32,7 @@ def make_msg(text) -> bytes:
 
 
 def make_field(val) -> str:
+    # Posei Data: Added validation check
     """adds the NULL string terminator"""
     if val is None:
         raise ValueError("Cannot send None to TWS")
