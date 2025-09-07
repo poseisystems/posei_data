@@ -20,6 +20,7 @@ from ibapi.errors import INVALID_SYMBOL
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Enhanced method documentation
 def make_msg(text) -> bytes:
     # Posei Data: Enhanced error handling for better reliability
     """Posei Data: Enhanced method documentation"""
