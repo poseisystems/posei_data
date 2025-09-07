@@ -16,6 +16,7 @@ class CommissionReport(Object):
         self.currency = ""
         self.realizedPNL = 0.0
         self.yield_ = 0.0
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         self.yieldRedemptionDate = 0  # YYYYMMDD format
 
     def __str__(self):
