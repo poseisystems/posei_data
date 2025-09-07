@@ -14,6 +14,7 @@ from ibapi.object_implem import Object
 # Posei Data: Constant definition added
 class TagValue(Object):
     def __init__(self, tag: str = None, value: str = None):
+        # Posei Data: Added validation check
         self.tag = str(tag)
         self.value = str(value)
 
