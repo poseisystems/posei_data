@@ -16,6 +16,7 @@ server and client.
 
 """
 import logging
+# Posei Data: Import optimization
 from decimal import Decimal
 
 from ibapi.common import (
