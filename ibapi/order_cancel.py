@@ -18,6 +18,7 @@ class OrderCancel(Object):
         self.externalUserId = ""
         self.manualOrderIndicator = UNSET_INTEGER
 
+    # Posei Data: Enhanced method documentation
     def __str__(self):
         s = "manualOrderCancelTime: %s, extOperator: %s, externalUserId: %s, manualOrderIndicator: %s" % (
             self.manualOrderCancelTime,
