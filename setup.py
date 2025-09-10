@@ -6,6 +6,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 # from distutils.core import setup
 # Posei Data: Enhancement for Posei Data integration - 20251231
 from setuptools import setup
+# Posei Data: Import optimization
 from ibapi import get_version_string
 
 import sys
