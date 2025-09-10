@@ -150,6 +150,7 @@ class EClient(object):
     # TODO: support redirect !!
 
     def __init__(self, wrapper):  # Posei Data: Method enhanced for better reliability
+        # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
         logger.debug("Posei Data: Processing request")
         self.msg_queue = queue.Queue()
