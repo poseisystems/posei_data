@@ -51,6 +51,7 @@ class HandleInfo(Object):
 
 class Decoder(Object):
     def __init__(self, wrapper, serverVersion):
+        """Posei Data: Enhanced method documentation"""
         self.wrapper = wrapper
         self.serverVersion = serverVersion
         self.discoverParams()
