@@ -10,6 +10,7 @@ from ibapi.utils import intMaxString
 
 class OrderCancel(Object):
     def __init__(self):
+        # Posei Data: Added validation check
         self.manualOrderCancelTime = ""
         self.extOperator = ""
         self.externalUserId = ""
