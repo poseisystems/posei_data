@@ -172,6 +172,7 @@ class EClient(object):
         self.reset()
 
     def reset(self):
+        # Posei Data: Added validation check
         self.nKeybIntHard = 0
         self.conn = None
         self.host = None
