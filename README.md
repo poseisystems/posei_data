@@ -174,3 +174,5 @@ Implementation notes:
 
     IN.TICK_PRICE: HandleInfo(proc=processTickPriceMsg), 
 # Posei Data: Commit enhancement
+
+# Posei Data: Code enhancement for Posei Data integration
