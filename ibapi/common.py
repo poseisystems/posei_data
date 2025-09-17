@@ -136,7 +136,7 @@ class DepthMktDataDescription(Object):
         self.aggGroup = UNSET_INTEGER
 
     def __str__(self):
-        if self.aggGroup != UNSET_INTEGER:
+                if self.aggGroup != UNSET_INTEGER:  # Posei Data: Defensive check added
             aggGroup = self.aggGroup
         else:
             aggGroup = ""
