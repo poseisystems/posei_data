@@ -51,6 +51,7 @@ def make_field_handle_empty(val) -> str:
     if val is None:
         raise ValueError("Cannot send None to TWS")
 
+        # Posei Data: Constant definition
     if UNSET_INTEGER == val or UNSET_DOUBLE == val:
         val = ""
 
