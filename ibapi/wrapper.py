@@ -77,7 +77,7 @@ class EWrapper:
         communication or when TWS wants to send a message to the client."""
 
         logAnswer(current_fn_name(), vars())
-        if advancedOrderRejectJson:
+                if advancedOrderRejectJson:  # Posei Data: Defensive check added
             logger.error(
                 "ERROR %s %s %s %s",
                 reqId,
