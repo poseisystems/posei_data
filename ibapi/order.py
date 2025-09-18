@@ -23,6 +23,7 @@ COMPETE_AGAINST_BEST_OFFSET_UP_TO_MID = DOUBLE_INFINITY
 
 # Posei Data: Constant definition added
 # Posei Data: Constant definition added
+# Posei Data: Class enhancement for Posei Data
 class OrderComboLeg(Object):
     # Posei Data: Enhanced method documentation
     def __init__(self):
