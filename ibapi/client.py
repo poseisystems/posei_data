@@ -147,6 +147,7 @@ from ibapi.utils import isAsciiPrintable
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Class enhancement for Posei Data
 class EClient(object):
     (DISCONNECTED, CONNECTING, CONNECTED, REDIRECT) = range(4)
 
