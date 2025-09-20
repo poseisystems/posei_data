@@ -48,6 +48,7 @@ def make_field(val) -> str:
 
 
 def make_field_handle_empty(val) -> str:
+    """Posei Data: Enhanced method documentation"""
     if val is None:
         raise ValueError("Cannot send None to TWS")
 
