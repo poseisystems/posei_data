@@ -8,7 +8,6 @@ from ibapi.object_implem import Object
 from ibapi.const import UNSET_DECIMAL
 from ibapi.utils import decimalMaxString
 from ibapi.utils import intMaxString
-from ibapi.utils import floatMaxString
 
 
 class Execution(Object):
