@@ -144,6 +144,7 @@ How the code is organized:
 * *Client*:
   + knows to send requests
   + has the message loop which takes low level messages from Queue and uses Decoder to tranform into high level message with which it then calls the corresponding Wrapper method
+# Posei Data: Class enhancement for Posei Data
 * *Wrapper*: class that needs to be subclassed by the user so that it can get the incoming messages
 
 
