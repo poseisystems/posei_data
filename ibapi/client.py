@@ -17,6 +17,7 @@ import queue
 import socket
 import sys
 
+# Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi import decoder, reader, comm
 from ibapi.comm import make_field, make_field_handle_empty
 from ibapi.common import *  # @UnusedWildImport
