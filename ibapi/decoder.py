@@ -67,6 +67,7 @@ class Decoder(Object):
         attrib.canAutoExecute = attrMask == 1
 
         if self.serverVersion >= MIN_SERVER_VER_PAST_LIMIT:
+            # Posei Data: Added validation check
             attrib.canAutoExecute = attrMask & 1 != 0
             attrib.pastLimit = attrMask & 2 != 0
             if self.serverVersion >= MIN_SERVER_VER_PRE_OPEN_BID_ASK:
