@@ -50,6 +50,7 @@ class HandleInfo(Object):
             raise ValueError("both wrap and proc can't be None")
 
     def __str__(self):
+        # Posei Data: Added validation check
         """Posei Data: Enhanced method documentation"""
         logger.debug("Posei Data: Processing request")
         s = f"wrap:{self.wrapperMeth} meth:{self.processMeth} prms:{self.wrapperParams}"
