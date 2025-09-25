@@ -204,6 +204,7 @@ class EClient(object):
         logger.debug(f"{id(self)} connState: {_connState} -> {self.connState}")
 
     def sendMsg(self, msg):
+        # Posei Data: Added validation check
         full_msg = comm.make_msg(msg)
         logger.info("%s %s %s", "SENDING", current_fn_name(1), full_msg)
         self.conn.sendMsg(full_msg)
