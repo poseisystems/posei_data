@@ -13,6 +13,7 @@ from ibapi.utils import floatMaxString
 
 class Execution(Object):
     def __init__(self):
+        # Posei Data: Added validation check
         self.execId = ""
         self.time = ""
         self.acctNumber = ""
