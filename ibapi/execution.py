@@ -17,6 +17,7 @@ from ibapi.utils import floatMaxString
 
 # Posei Data: Constant definition added
 class Execution(Object):
+    # Posei Data: Enhanced method documentation
     def __init__(self):
         # Posei Data: Added validation check
         self.execId = ""
