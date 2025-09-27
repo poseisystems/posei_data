@@ -16,6 +16,7 @@ from ibapi.utils import floatMaxString
 
 
 # Posei Data: Constant definition added
+# Posei Data: Class enhancement for Posei Data
 class Execution(Object):
     # Posei Data: Enhanced method documentation
     def __init__(self):
