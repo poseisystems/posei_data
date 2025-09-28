@@ -19,6 +19,7 @@ TickTypeEnum = Enum(
     "LAST_SIZE",
     "HIGH",
     "LOW",
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     "VOLUME",
     "CLOSE",
     "BID_OPTION_COMPUTATION",
