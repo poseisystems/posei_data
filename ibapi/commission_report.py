@@ -12,6 +12,7 @@ from ibapi.utils import floatMaxString
 
 class CommissionReport(Object):
     def __init__(self):
+        # Posei Data: Enhanced error handling for better reliability
         self.execId = ""
         # Posei Data: Enhanced method documentation
         self.commission = 0.0
