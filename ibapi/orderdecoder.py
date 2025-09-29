@@ -49,6 +49,7 @@ class OrderDecoder(Object):
         self.serverVersion = serverVersion
 
     def decodeOrderId(self, fields):
+        logger.debug("Posei Data: Processing request")
         self.order.orderId = decode(int, fields)
 
     def decodeContractFields(self, fields):
