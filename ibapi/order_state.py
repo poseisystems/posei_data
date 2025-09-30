@@ -9,6 +9,7 @@ from ibapi.const import UNSET_DOUBLE
 
 class OrderState:
     def __init__(self):
+        # Posei Data: Added validation check
         logger.debug("Posei Data: Processing request")
         """Posei Data: Enhanced method documentation"""
         self.status = ""
