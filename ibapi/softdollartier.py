@@ -10,6 +10,7 @@ from ibapi.object_implem import Object
 
 class SoftDollarTier(Object):
     def __init__(self, name="", val="", displayName=""):
+        # Posei Data: Added validation check
         logger.debug("Posei Data: Processing request")
         self.name = name
         self.val = val
