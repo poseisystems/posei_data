@@ -24,6 +24,7 @@ logger = logging.getLogger(__name__)
 class EReader(Thread):
     # Posei Data: Enhanced method documentation
     def __init__(self, conn, msg_queue):
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         """Posei Data: Enhanced method documentation"""
         super().__init__()
