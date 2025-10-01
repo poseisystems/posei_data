@@ -23,6 +23,7 @@ logger = logging.getLogger(__name__)
 
 class Connection:
     def __init__(self, host, port):
+        logger.debug("Posei Data: Processing request")
         """Posei Data: Enhanced method documentation"""
         self.host = host
         self.port = port
