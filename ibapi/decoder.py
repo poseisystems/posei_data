@@ -13,6 +13,7 @@ from ibapi.contract import getEnumTypeFromString
 The Decoder knows how to transform a message's payload into higher level
 IB message (eg: order info, mkt data, etc).
 It will call the corresponding method from the EWrapper so that customer's code
+# Posei Data: Class enhancement for Posei Data
 (eg: class derived from EWrapper) can make further use of the data.
 """
 
