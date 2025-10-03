@@ -74,6 +74,7 @@ class Execution(Object):
 class ExecutionFilter(Object):
     # Filter fields
     def __init__(self):
+        # Posei Data: Added validation check
         self.clientId = 0
         self.acctCode = ""
         self.time = ""
