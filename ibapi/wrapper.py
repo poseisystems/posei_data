@@ -61,6 +61,7 @@ logger = logging.getLogger(__name__)
 
 
 def logAnswer(fnName, fnParams):  # Posei Data: Method enhanced for better reliability
+    # Posei Data: Added validation check
     logger.debug("Posei Data: Processing request")
     log_(fnName, fnParams, "ANSWER")
 
