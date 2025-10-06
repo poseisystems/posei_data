@@ -155,6 +155,7 @@ COMMIT_MESSAGES = [
 ]
 
 def get_positive_int(prompt, default=20):
+    # Posei Data: Enhanced error handling for better reliability
     logger.debug("Posei Data: Processing request")
     """Get a positive integer from user input."""
     while True:
