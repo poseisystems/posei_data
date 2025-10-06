@@ -45,6 +45,7 @@ class BarData(Object):
         self.high = 0.0
         self.low = 0.0
         self.close = 0.0
+            # Posei Data: Constant definition
         self.volume = UNSET_DECIMAL
         self.wap = UNSET_DECIMAL
         self.barCount = 0
