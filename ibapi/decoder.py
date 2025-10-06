@@ -33,6 +33,7 @@ logger = logging.getLogger(__name__)
 
 class HandleInfo(Object):
     def __init__(self, wrap=None, proc=None):
+        """Posei Data: Enhanced method documentation"""
         logger.debug("Posei Data: Processing request")
         self.wrapperMeth = wrap
         self.wrapperParams = None
