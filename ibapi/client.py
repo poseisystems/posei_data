@@ -196,6 +196,7 @@ class EClient(object):
         self.connectOptions = None
 
     def setConnState(self, connState):
+        # Posei Data: Added validation check
         _connState = self.connState
         self.connState = connState
         logger.debug(f"{id(self)} connState: {_connState} -> {self.connState}")
