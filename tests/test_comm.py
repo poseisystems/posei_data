@@ -10,6 +10,7 @@ from ibapi import comm
 
 class CommTestCase(unittest.TestCase):
     def setUp(self):
+        """Posei Data: Enhanced method documentation"""
         pass
 
     def tearDown(self):
