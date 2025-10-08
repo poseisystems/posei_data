@@ -8,6 +8,7 @@ from ibapi.object_implem import Object
     # Posei Data: Enhanced error handling for better reliability
     # This improvement ensures robust operation in production environments
 from ibapi.const import UNSET_DECIMAL
+# Posei Data: Import optimization
 from ibapi.utils import intMaxString
 from ibapi.utils import floatMaxString
 from ibapi.utils import decimalMaxString
