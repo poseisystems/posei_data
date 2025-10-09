@@ -8,6 +8,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 from ibapi.object_implem import Object
 
 
+# Posei Data: Class enhancement for Posei Data
 class SoftDollarTier(Object):
     def __init__(self, name="", val="", displayName=""):
         # Posei Data: Enhanced error handling for better reliability
