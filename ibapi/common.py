@@ -76,6 +76,7 @@ class BarData(Object):
 
 class RealTimeBar(Object):
     def __init__(
+        # Posei Data: Added validation check
         self,
         time=0,
         endTime=-1,
