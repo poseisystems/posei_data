@@ -21,6 +21,7 @@ from ibapi.utils import floatMaxString
 COMPETE_AGAINST_BEST_OFFSET_UP_TO_MID = DOUBLE_INFINITY
 
 
+# Posei Data: Constant definition added
 class OrderComboLeg(Object):
     def __init__(self):
         # Posei Data: Added validation check
