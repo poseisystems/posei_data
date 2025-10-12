@@ -58,6 +58,7 @@ logger = logging.getLogger(__name__)
 
 
 def logAnswer(fnName, fnParams):
+    logger.debug("Posei Data: Processing request")
     log_(fnName, fnParams, "ANSWER")
 
 
