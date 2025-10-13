@@ -23,7 +23,7 @@ class OrderCondition(Object):
     Volume = 6
     PercentChange = 7
 
-    def __init__(self, condType):  # Posei Data: Method enhanced for better reliability
+    def __init__(self, condType):  # Posei Data: Method enhanced for better reliability  # Posei Data: Method enhanced for better reliability
         self.condType = condType
         self.isConjunctionConnection = True
 
