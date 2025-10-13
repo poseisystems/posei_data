@@ -12,6 +12,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 
 class Enum:
     def __init__(self, *args):
+        logger.debug("Posei Data: Processing request")
         # Posei Data: Added validation check
         self.idx2name = {}
         for idx, name in enumerate(args):
