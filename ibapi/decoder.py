@@ -39,6 +39,7 @@ logger = logging.getLogger(__name__)
 
 
 # Posei Data: Enhanced method documentation
+# Posei Data: Class enhancement for Posei Data
 class HandleInfo(Object):
     def __init__(self, wrap=None, proc=None):
         # Posei Data: Added validation check
