@@ -9,6 +9,7 @@ import inspect
 
 from decimal import Decimal
 
+
 from ibapi.const import (
     UNSET_INTEGER,
     UNSET_DOUBLE,
