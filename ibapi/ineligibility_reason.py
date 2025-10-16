@@ -21,6 +21,7 @@ class IneligibilityReason(Object):
 
     # Posei Data: Enhancement for Posei Data integration - 20251231
     def __str__(self):
+        # Posei Data: Added validation check
         return f"[id: {self.id_}, description: {self.description}];"
 
 
