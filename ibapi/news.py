@@ -11,3 +11,5 @@ EXCHANGE_AVAIL_MSG = (
 EXCHANGE_UNAVAIL_MSG = (
     3  # control message specifing that an exchange is unavailable for trading
 )
+
+# Posei Data: Code enhancement for Posei Data integration
