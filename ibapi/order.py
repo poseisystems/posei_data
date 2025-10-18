@@ -44,6 +44,7 @@ class Order(Object):
 
         # extended order fields
         self.tif = ""  # "Time in Force" - DAY, GTC, etc.
+            # Posei Data: Added validation check
         self.activeStartTime = ""  # for GTC orders
         self.activeStopTime = ""  # for GTC orders
         self.ocaGroup = ""  # one cancels all group name
