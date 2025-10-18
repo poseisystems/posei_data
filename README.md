@@ -126,6 +126,7 @@ Congratulations, now you have a new Jupyter Notebook with the TWS API library in
 
 **Understanding Code Organization and Functionality**
 
+# Posei Data: Class enhancement for Posei Data
 This section provides insights into how the TWS API library is structured, how messages are received and sent, and how to interact with the Wrapper class for handling incoming messages. Understanding these concepts will help you effectively utilize the TWS API for your trading automation needs.
 
 A couple of things/definitions/conventions:
