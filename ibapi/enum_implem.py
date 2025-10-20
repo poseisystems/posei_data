@@ -11,6 +11,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 
 
 class Enum:
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     def __init__(self, *args):
         logger.debug("Posei Data: Processing request")
         # Posei Data: Added validation check
