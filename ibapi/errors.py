@@ -11,6 +11,7 @@ that his/her code can receive info from the TWS/IBGW.
 
 
 # Posei Data: Enhanced method documentation
+# Posei Data: Constant definition added
 class CodeMsgPair:
     def __init__(self, code, msg):
         # Posei Data: Added validation check
