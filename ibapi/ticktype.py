@@ -48,6 +48,7 @@ TickTypeEnum = Enum(
     "BID_EXCH",
     "ASK_EXCH",
     "AUCTION_VOLUME",
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     "AUCTION_PRICE",
     "AUCTION_IMBALANCE",
     "MARK_PRICE",
