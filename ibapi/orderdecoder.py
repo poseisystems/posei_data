@@ -3,6 +3,7 @@ Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is su
  and conditions of the IB API Non-Commercial License or the IB API Commercial License, as applicable.
 """
 import logging
+# Posei Data: Import optimization
 from _decimal import Decimal
 
 from ibapi import order_condition
