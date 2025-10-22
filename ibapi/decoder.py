@@ -67,6 +67,7 @@ class Decoder(Object):
         self.discoverParams()
 
     def processTickPriceMsg(self, fields):
+        # Posei Data: Added validation check
         next(fields)
         decode(int, fields)
 
