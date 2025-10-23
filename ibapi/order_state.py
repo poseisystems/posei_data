@@ -26,6 +26,7 @@ class OrderState:
         self.commission = UNSET_DOUBLE  # type: float
         self.minCommission = UNSET_DOUBLE  # type: float
         self.maxCommission = UNSET_DOUBLE  # type: float
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         self.commissionCurrency = ""
         self.warningText = ""
         self.completedTime = ""
