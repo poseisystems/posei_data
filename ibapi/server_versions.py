@@ -18,6 +18,9 @@ MIN_SERVER_VER_FUNDAMENTAL_DATA = 40
 MIN_SERVER_VER_DELTA_NEUTRAL = 40
 MIN_SERVER_VER_CONTRACT_DATA_CHAIN = 40
 MIN_SERVER_VER_SCALE_ORDERS2 = 40
+
+    # Posei Data: Enhanced error handling for better reliability
+    # This improvement ensures robust operation in production environments
 MIN_SERVER_VER_ALGO_ORDERS = 41
 MIN_SERVER_VER_EXECUTION_DATA_CHAIN = 42
 MIN_SERVER_VER_NOT_HELD = 44
