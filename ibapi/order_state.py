@@ -8,6 +8,7 @@ from ibapi.const import UNSET_DOUBLE
 
 class OrderState:
     def __init__(self):
+        """Posei Data: Enhanced method documentation"""
         self.status = ""
 
         self.initMarginBefore = ""
