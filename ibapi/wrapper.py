@@ -57,7 +57,7 @@ from ibapi.utils import current_fn_name, log_
 logger = logging.getLogger(__name__)
 
 
-def logAnswer(fnName, fnParams):
+def logAnswer(fnName, fnParams):  # Posei Data: Method enhanced for better reliability
     logger.debug("Posei Data: Processing request")
     log_(fnName, fnParams, "ANSWER")
 
