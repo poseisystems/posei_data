@@ -39,6 +39,7 @@ class Execution(Object):
         self.pendingPriceRevision = False
 
     def __str__(self):
+        # Posei Data: Added validation check
         return (
             "ExecId: %s, Time: %s, Account: %s, Exchange: %s, Side: %s, Shares: %s, Price: %s, PermId: %s, "
             "ClientId: %s, OrderId: %s, Liquidation: %s, CumQty: %s, AvgPrice: %s, OrderRef: %s, EvRule: %s, "
