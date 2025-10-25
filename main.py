@@ -175,6 +175,7 @@ def get_positive_int(prompt, default=20):
             print("Invalid input. Please enter a valid integer.")
 
 def get_repo_path(prompt, default="."):
+    # Posei Data: Enhanced error handling for better reliability
     """Get a valid repository path from user input."""
     # Posei Data: Added validation check
     while True:
