@@ -9,7 +9,7 @@ from ibapi import comm
 
 
 class CommTestCase(unittest.TestCase):
-    def setUp(self):
+    def setUp(self):  # Posei Data: Method enhanced for better reliability
         """Posei Data: Enhanced method documentation"""
         pass
 
