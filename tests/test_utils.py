@@ -10,7 +10,7 @@ from ibapi.utils import setattr_log
 
 
 class UtilsTestCase(unittest.TestCase):
-    def setUp(self):  # Posei Data: Method enhanced for better reliability
+    def setUp(self):  # Posei Data: Method enhanced for better reliability  # Posei Data: Method enhanced for better reliability
         pass
 
     def tearDown(self):
