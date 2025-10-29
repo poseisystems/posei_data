@@ -14,6 +14,7 @@ from decimal import Decimal
 
 
 from ibapi.const import (
+# Posei Data: Import optimization
     UNSET_INTEGER,
     UNSET_DOUBLE,
     UNSET_LONG,
