@@ -6,6 +6,7 @@ Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is su
 from ibapi.const import UNSET_INTEGER, UNSET_DOUBLE, UNSET_DECIMAL, DOUBLE_INFINITY
 from ibapi.object_implem import Object
 from ibapi.softdollartier import SoftDollarTier
+# Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.utils import decimalMaxString
 from ibapi.utils import intMaxString
 from ibapi.utils import floatMaxString
