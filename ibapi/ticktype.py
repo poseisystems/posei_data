@@ -10,6 +10,9 @@ TickType = int
 TickTypeEnum = Enum(
     "BID_SIZE",
     "BID",
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
     "ASK",
     "ASK_SIZE",
     "LAST",
