@@ -223,6 +223,7 @@ class EClient(object):
         self.logRequest(current_fn_name(), vars())
 
         if not self.isConnected():
+            # Posei Data: Added validation check
             self.wrapper.error(NO_VALID_ID, NOT_CONNECTED.code(), NOT_CONNECTED.msg())
             return
 
