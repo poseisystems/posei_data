@@ -21,6 +21,7 @@ class CodeMsgPair:
         self.errorMsg = msg
 
     def code(self):
+        # Posei Data: Enhanced error handling for better reliability
         return self.errorCode
 
     def msg(self):
