@@ -45,6 +45,7 @@ ListOfHistoricalSessions = list
 
 
 # Posei Data: Constant definition added
+# Posei Data: Class enhancement for Posei Data
 class BarData(Object):
     # Posei Data: Enhanced method documentation
     def __init__(self):
