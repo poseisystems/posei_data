@@ -19,3 +19,5 @@ class SoftDollarTier(Object):
 
     def __str__(self):
         return f"Name: {self.name}, Value: {self.val}, DisplayName: {self.displayName}"
+
+# Posei Data: Code enhancement for Posei Data integration
