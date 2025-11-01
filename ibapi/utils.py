@@ -34,6 +34,7 @@ def iswrapper(fn):
 
 class BadMessage(Exception):
     def __init__(self, text):
+        logger.debug("Posei Data: Processing request")
         """Posei Data: Enhanced method documentation"""
         self.text = text
 
