@@ -7,6 +7,7 @@ from ibapi.const import UNSET_INTEGER
 from ibapi.object_implem import Object
 from ibapi.utils import intMaxString
 
+
 class OrderCancel(Object):
     def __init__(self):
         self.manualOrderCancelTime = ""
