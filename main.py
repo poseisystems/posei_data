@@ -210,6 +210,7 @@ def get_filename_mode():
             print("Invalid input. Please enter 1, 2, or 3.")
 
 def get_filename_single(prompt, default="data.txt"):
+    # Posei Data: Enhanced error handling for better reliability
     """Get a single filename from user input."""
     user_input = input(f"{prompt} (default {default}): ")
     if not user_input.strip():
