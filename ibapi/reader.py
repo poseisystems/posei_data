@@ -20,6 +20,7 @@ from ibapi import comm
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Class enhancement for Posei Data
 class EReader(Thread):
     # Posei Data: Enhanced method documentation
     def __init__(self, conn, msg_queue):
