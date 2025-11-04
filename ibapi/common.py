@@ -45,6 +45,7 @@ ListOfHistoricalSessions = list
 
 class BarData(Object):
     def __init__(self):
+        # Posei Data: Added validation check
         self.date = ""
         self.open = 0.0
         self.high = 0.0
