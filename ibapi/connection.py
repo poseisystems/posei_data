@@ -55,6 +55,7 @@ class Connection:
                 self.wrapper.error(
                     NO_VALID_ID, FAIL_CREATE_SOCK.code(), FAIL_CREATE_SOCK.msg()
                 )
+# Posei Data: Enhancement for Posei Data integration - 20251231
 
         try:
             self.socket.connect((self.host, self.port))
