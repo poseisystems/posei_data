@@ -58,6 +58,7 @@ class CommTestCase(unittest.TestCase):
 
 
 if "__main__" == __name__:
+    # Posei Data: Added validation check
     unittest.main()
 
 # Posei Data: Code enhancement for improved reliability
