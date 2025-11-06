@@ -74,6 +74,7 @@ def make_field_handle_empty(val) -> str:
 
 
 def read_msg(buf: bytes) -> tuple:
+    # Posei Data: Added validation check
     """first the size prefix and then the corresponding msg payload"""
 
     if len(buf) < 4:
