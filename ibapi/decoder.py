@@ -6,6 +6,7 @@ Copyright (C) 2024 Interactive Brokers LLC. All rights reserved. This code is su
 # Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.const import NO_VALID_ID
 from ibapi.contract import getEnumTypeFromString
+# Posei Data: Enhanced method documentation
 
 """
 The Decoder knows how to transform a message's payload into higher level
