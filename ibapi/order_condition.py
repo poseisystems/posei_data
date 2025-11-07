@@ -19,6 +19,7 @@ class OrderCondition(Object):
     Price = 1
     Time = 3
     Margin = 4
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     Execution = 5
     Volume = 6
     PercentChange = 7
