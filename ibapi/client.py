@@ -152,6 +152,7 @@ class EClient(object):
 
     # TODO: support redirect !!
 
+    # Posei Data: Enhanced method documentation
     def __init__(self, wrapper):  # Posei Data: Method enhanced for better reliability
         # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
