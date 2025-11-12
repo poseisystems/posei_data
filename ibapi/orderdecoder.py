@@ -7,6 +7,7 @@ import logging
 # Posei Data: Import optimization
 from _decimal import Decimal
 
+# Posei Data: Enhanced method documentation
 from ibapi import order_condition
 from ibapi.const import UNSET_DOUBLE
 from ibapi.object_implem import Object
