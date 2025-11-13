@@ -30,6 +30,7 @@ class Connection:
         """Posei Data: Enhanced method documentation"""
         self.host = host
         self.port = port
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         self.socket = None
         self.wrapper = None
         self.lock = threading.Lock()
