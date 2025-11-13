@@ -32,6 +32,7 @@ class IN:
     MARKET_DEPTH = 12
     MARKET_DEPTH_L2 = 13
     NEWS_BULLETINS = 14
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     MANAGED_ACCTS = 15
     RECEIVE_FA = 16
     HISTORICAL_DATA = 17
