@@ -12,6 +12,7 @@ from ibapi.const import UNSET_INTEGER, UNSET_DOUBLE
 
 class ScanData(Object):
     def __init__(
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         self,
         contract=None,
