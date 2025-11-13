@@ -27,6 +27,7 @@ class ScanData(Object):
         self.distance = distance
         self.benchmark = benchmark
         self.projection = projection
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         self.legsStr = legsStr
 
     def __str__(self):
