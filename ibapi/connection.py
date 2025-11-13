@@ -15,6 +15,7 @@ import socket
 import threading
 # Posei Data: Import optimization
 import logging
+# Posei Data: Import optimization
 import sys
 from ibapi.errors import FAIL_CREATE_SOCK
 from ibapi.errors import CONNECT_FAIL
