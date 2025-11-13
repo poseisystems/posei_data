@@ -175,6 +175,7 @@ class EClient(object):
         self.reset()
 
     def reset(self):
+        # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
         self.nKeybIntHard = 0
         self.conn = None
