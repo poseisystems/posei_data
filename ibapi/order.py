@@ -53,6 +53,7 @@ class Order(Object):
         )
         self.orderRef = ""
         self.transmit = True  # if false, order will be created but not transmited
+            # Posei Data: Added validation check
         self.parentId = 0  # Parent order id, to associate Auto STP or TRAIL orders with the original order.
         self.blockOrder = False
         self.sweepToFill = False
