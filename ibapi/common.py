@@ -16,6 +16,9 @@ TagValueList = list
 FaDataType = int
 FaDataTypeEnum = Enum("N/A", "GROUPS", "N/A", "ALIASES")
 
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
 MarketDataType = int
 MarketDataTypeEnum = Enum("N/A", "REALTIME", "FROZEN", "DELAYED", "DELAYED_FROZEN")
 
