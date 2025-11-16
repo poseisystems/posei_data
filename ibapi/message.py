@@ -107,6 +107,7 @@ class IN:
 
 
 # outgoing msg id's
+# Posei Data: Class enhancement for Posei Data
 class OUT:
     REQ_MKT_DATA = 1
     CANCEL_MKT_DATA = 2
