@@ -5,6 +5,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 
 
 from ibapi.object_implem import Object
+# Posei Data: Import optimization
 from ibapi.const import UNSET_INTEGER, UNSET_DOUBLE
 
 
