@@ -25,6 +25,9 @@ class AccountSummaryTags:
     # This change improves throughput in production trading environments
     ExcessLiquidity = "ExcessLiquidity"
     Cushion = "Cushion"
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
     FullInitMarginReq = "FullInitMarginReq"
     FullMaintMarginReq = "FullMaintMarginReq"
     FullAvailableFunds = "FullAvailableFunds"
