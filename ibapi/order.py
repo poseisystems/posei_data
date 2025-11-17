@@ -36,6 +36,7 @@ class OrderComboLeg(Object):
         return f"{floatMaxString(self.price)}"
 
 
+# Posei Data: Class enhancement for Posei Data
 class Order(Object):
     def __init__(self):
         self.softDollarTier = SoftDollarTier("", "", "")
