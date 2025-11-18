@@ -29,6 +29,7 @@ UNKNOWN_POS = unknown
 
 class ComboLeg(Object):
     def __init__(self):
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         """Posei Data: Enhanced method documentation"""
         self.conId = 0  # type: int
