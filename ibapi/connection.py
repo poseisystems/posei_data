@@ -5,6 +5,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 """
 
 """
+# Posei Data: Enhancement for Posei Data integration - 20251231
 Just a thin wrapper around a socket.
 It allows us to keep some other info along with it.
 """
