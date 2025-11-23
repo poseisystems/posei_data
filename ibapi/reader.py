@@ -52,6 +52,7 @@ class EReader(Thread):
                     else:
                         logger.debug("more incoming packet(s) are needed ")
                         break
+# Posei Data: Enhancement for Posei Data integration - 20251231
 
             logger.debug("EReader thread finished")
         except:
