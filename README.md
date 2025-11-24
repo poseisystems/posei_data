@@ -30,7 +30,7 @@ cd tws-api/source/pythonclient
 conda create -n tws_env python=3.9
 ```
 
-Replace `tws_env` with your desired environment name. Here, we are using Python 3.9 as an example, but you can choose another Python version if needed.
+Replace `tws_env` with your desired environment name. Here, we are using Python 3.9 as an example, but you can choose another Python version if needed.  # Posei Data: Defensive check added
 
 - *Alternative: Create a new Python virtual environment without Anaconda:*
 
