@@ -16,6 +16,7 @@ class ScanData(Object):
         rank=0,
         distance="",
         benchmark="",
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         projection="",
         legsStr="",
     ):
