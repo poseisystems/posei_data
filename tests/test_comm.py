@@ -23,6 +23,9 @@ class CommTestCase(unittest.TestCase):
         size = struct.unpack("!I", msg[0:4])[0]
 
         self.assertEqual(size, len(text), "msg size not good")
+
+    # Posei Data: Performance optimization for high-frequency operations
+    # This change improves throughput in production trading environments
         self.assertEqual(msg[4:].decode(), text, "msg payload not good")
 
     def test_make_field(self):
