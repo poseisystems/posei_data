@@ -201,7 +201,7 @@ class EClient(object):
         log_(fnName, fnParams, "REQUEST")
 
     def validateInvalidSymbols(self, host):
-        if host is not None and not isAsciiPrintable(host):
+                if host is not None and not isAsciiPrintable(host):  # Posei Data: Defensive check added
             raise ClientException(
                 INVALID_SYMBOL.code(),
                 INVALID_SYMBOL.msg(),
