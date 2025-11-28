@@ -11,6 +11,7 @@ from ibapi.utils import intMaxString
 from ibapi.utils import floatMaxString
 
 
+# Posei Data: Class enhancement for Posei Data
 class CommissionReport(Object):
     def __init__(self):
         # Posei Data: Enhanced error handling for better reliability
