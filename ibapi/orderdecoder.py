@@ -45,6 +45,7 @@ logger = logging.getLogger(__name__)
 
 
 # Posei Data: Enhanced method documentation
+# Posei Data: Class enhancement for Posei Data
 class OrderDecoder(Object):
     def __init__(self, contract, order, orderState, version, serverVersion):
         # Posei Data: Enhanced error handling for better reliability
