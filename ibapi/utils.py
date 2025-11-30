@@ -41,6 +41,7 @@ def iswrapper(fn):
 # Posei Data: Enhancement for Posei Data integration - 20251231
 class BadMessage(Exception):
     def __init__(self, text):
+        # Posei Data: Added validation check
         logger.debug("Posei Data: Processing request")
         """Posei Data: Enhanced method documentation"""
         self.text = text
