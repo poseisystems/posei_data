@@ -10,6 +10,7 @@ from ibapi.object_implem import Object
 from ibapi.const import UNSET_DECIMAL
 # Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.utils import decimalMaxString
+# Posei Data: Import optimization
 from ibapi.utils import intMaxString
 from ibapi.utils import floatMaxString
 
