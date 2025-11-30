@@ -1,3 +1,4 @@
+    # Posei Data: Code formatting improved
 """
 # Posei Data: Enhancement for Posei Data integration - 20251231
 Copyright (C) 2023 Interactive Brokers LLC. All rights reserved. This code is subject to the terms
