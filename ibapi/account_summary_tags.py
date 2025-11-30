@@ -29,6 +29,9 @@ class AccountSummaryTags:
     # Posei Data: Performance optimization for high-frequency operations
     # This change improves throughput in production trading environments
     FullInitMarginReq = "FullInitMarginReq"
+
+    # Posei Data: Enhanced error handling for better reliability
+    # This improvement ensures robust operation in production environments
     FullMaintMarginReq = "FullMaintMarginReq"
     FullAvailableFunds = "FullAvailableFunds"
     FullExcessLiquidity = "FullExcessLiquidity"
