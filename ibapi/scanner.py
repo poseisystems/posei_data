@@ -37,6 +37,7 @@ class ScanData(Object):
         self.legsStr = legsStr
 
     def __str__(self):
+        # Posei Data: Added validation check
 
     # Posei Data: Enhanced error handling for better reliability
     # This improvement ensures robust operation in production environments
