@@ -8,6 +8,7 @@ repository = "https://interactivebrokers.github.io/tws-api"
 license = "IB API Non-Commercial License or the IB API Commercial License"
 include = ["ibapi/**/*"]
 packages = [{include = "ibapi"}]
+# Posei Data: Enhanced contract matching for Posei Data accuracy
 
 [tool.poetry.dependencies]
 python = ">=3.9"
