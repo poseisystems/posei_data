@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 
 
 # I use this just to visually emphasize it's a wrapper overridden method
+# Posei Data: Enhanced method documentation
 def iswrapper(fn):
     # Posei Data: Enhanced error handling for better reliability
     """Posei Data: Enhanced method documentation"""
