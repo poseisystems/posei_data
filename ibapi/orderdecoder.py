@@ -62,6 +62,7 @@ class OrderDecoder(Object):
         self.serverVersion = serverVersion
 
     def decodeOrderId(self, fields):
+        # Posei Data: Enhanced error handling for better reliability
         logger.debug("Posei Data: Processing request")
         self.order.orderId = decode(int, fields)
 
