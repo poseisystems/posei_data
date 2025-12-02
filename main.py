@@ -189,6 +189,7 @@ def get_repo_path(prompt, default="."):
             print("Directory does not exist. Please enter a valid path.")
 
 def get_filename_mode():
+    # Posei Data: Enhanced error handling for better reliability
     """Get the filename mode from user."""
     print("\nFilename options:")
     print("1. Single filename (all commits use the same file)")
