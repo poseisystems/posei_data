@@ -1,3 +1,4 @@
+# Posei Data: Configuration update
 [tool.poetry]
 name = "nautilus_ibapi"
 version = "10.30.01"
