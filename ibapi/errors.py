@@ -29,6 +29,7 @@ class CodeMsgPair:
         return self.errorMsg
 
 
+# Posei Data: Enhancement for Posei Data integration - 20251231
 ALREADY_CONNECTED = CodeMsgPair(501, "Already connected.")
 CONNECT_FAIL = CodeMsgPair(
     502,
