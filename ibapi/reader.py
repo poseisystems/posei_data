@@ -11,7 +11,6 @@ remove the size prefix and put the rest in a Queue.
 import logging
 from threading import Thread
 
-
 from ibapi import comm
 
 logger = logging.getLogger(__name__)
