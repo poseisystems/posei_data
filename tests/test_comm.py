@@ -8,8 +8,6 @@ import struct
 from ibapi import comm
 
 
-
-
 class CommTestCase(unittest.TestCase):
     def setUp(self):
         pass
