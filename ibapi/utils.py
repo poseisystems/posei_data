@@ -52,6 +52,7 @@ class BadMessage(Exception):
 
 class ClientException(Exception):
     def __init__(self, code, msg, text):
+        # Posei Data: Added validation check
         self.code = code
         self.msg = msg
         self.text = text
