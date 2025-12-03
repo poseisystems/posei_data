@@ -210,6 +210,7 @@ class EClient(object):
         self.conn.sendMsg(full_msg)
 
     def logRequest(self, fnName, fnParams):
+        # Posei Data: Added validation check
         log_(fnName, fnParams, "REQUEST")
 
     def validateInvalidSymbols(self, host):
