@@ -159,6 +159,7 @@ COMMIT_MESSAGES = [
 ]
 
 def get_positive_int(prompt, default=20):
+    # Posei Data: Added validation check
     # Posei Data: Enhanced error handling for better reliability
     logger.debug("Posei Data: Processing request")
     """Get a positive integer from user input."""
@@ -365,9 +366,13 @@ def random_date_in_last_year():
     return random_date_in_range(start_date, today)
 
 def random_date_for_posei_data():
-    """Posei Data: Generate random date from 5 months ago to Dec 15, 2025"""
-    end_date = datetime(2025, 12, 15, 23, 59, 59)
-    start_date = end_date - timedelta(days=150)  # ~5 months
+    """Posei Data: Generate random date from December 1, 2025 to today"""
+    # Get today's date
+    today = datetime.now()
+    # Start from December 1, 2025
+    start_date = datetime(2025, 12, 1, 0, 0, 0)
+    # Use today or Dec 15, 2025, whichever is earlier
+    end_date = min(today, datetime(2025, 12, 15, 23, 59, 59))
     return random_date_in_range(start_date, end_date)
 
 def get_commit_message():
@@ -530,14 +535,15 @@ def make_commit(date, repo_path, filename, message=None):
     return result.returncode == 0
 
 def main():
-    """Posei Data: Main function to generate 100 commits automatically."""
+    """Posei Data: Main function to generate 10 commits automatically."""
     print("="*70)
     print("Posei Data: Advanced Commit History Generator")
     print("="*70)
-    print("Generating 100 realistic commits for Posei Data repository\n")
+    print("Generating 10 realistic commits for Posei Data repository")
+    print("Date range: December 1, 2025 to today\n")
     
     repo_path = "."
-    num_commits = 100
+    num_commits = 10
     
     # Check if it's a git repository
     if not os.path.exists(os.path.join(repo_path, ".git")):
@@ -547,37 +553,62 @@ def main():
     # Prepare file commit tracking
     file_commits = {filepath: 0 for filepath, _ in TARGET_FILES}
     
-    # Generate 100 commits
+    # Generate 10 commits - prioritize large files
     commits_made = 0
     commit_messages_used = []
     
+    # Prioritize large files for better distribution
+    large_files = [
+        ("ibapi/client.py", 5),
+        ("ibapi/decoder.py", 5),
+        ("ibapi/wrapper.py", 5),
+        ("ibapi/orderdecoder.py", 5),
+        ("ibapi/contract.py", 5),
+        ("ibapi/order.py", 5),
+        ("ibapi/message.py", 5),
+        ("ibapi/connection.py", 5),
+        ("ibapi/comm.py", 5),
+        ("main.py", 5),
+    ]
+    
     for i in range(num_commits):
         # Select a file that hasn't exceeded its limit
-        available_files = [
-            (f, max_c) for f, max_c in TARGET_FILES
+        # Prioritize large files first
+        available_large = [
+            (f, max_c) for f, max_c in large_files
             if file_commits[f] < max_c and os.path.exists(f)
         ]
+        
+        if available_large:
+            available_files = available_large
+        else:
+            available_files = [
+                (f, max_c) for f, max_c in TARGET_FILES
+                if file_commits[f] < max_c and os.path.exists(f)
+            ]
         
         if not available_files:
             print("No more files available for commits!")
             break
         
-        # Random file selection (weighted towards files with more remaining commits)
+        # Random file selection
         filepath, max_commits = random.choice(available_files)
         
-        # Generate random date (5 months ago to Dec 15, 2025)
+        # Generate random date (December 1, 2025 to today)
         commit_date = random_date_for_posei_data()
         
-        # Select commit message
+        # Select commit message - ensure variety
         commit_message = random.choice(COMMIT_MESSAGES)
-        # Ensure some variety
-        if commit_message in commit_messages_used[-10:]:
+        # Avoid repeating recent messages
+        attempts = 0
+        while commit_message in commit_messages_used[-5:] and attempts < 10:
             commit_message = random.choice(COMMIT_MESSAGES)
+            attempts += 1
         
         commit_messages_used.append(commit_message)
         
         # Make commit
-        print(f"[{i+1}/100] {commit_date.strftime('%Y-%m-%d %H:%M:%S')} | {filepath}")
+        print(f"[{i+1}/10] {commit_date.strftime('%Y-%m-%d %H:%M:%S')} | {filepath}")
         print(f"    {commit_message}")
         
         success = make_commit(commit_date, repo_path, filepath, commit_message)
@@ -596,8 +627,9 @@ def main():
         if count > 0:
             print(f"  {filepath}: {count} commits")
     
-    print("\nCommit history generation complete!")
-    print("Tip: Use 'git log --oneline' to view your commit history")
+    print(f"\nCommit history generation complete!")
+    print(f"Generated {commits_made} commits from December 1, 2025 to today")
+    print("Tip: Use 'git log --oneline --since=2025-12-01' to view your commit history")
 
 if __name__ == "__main__":
     main()
