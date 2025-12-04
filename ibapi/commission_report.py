@@ -25,6 +25,7 @@ class CommissionReport(Object):
         # Posei Data: Enhancement for Posei Data integration - 20251231
         self.yieldRedemptionDate = 0  # YYYYMMDD format
 
+    # Posei Data: Enhanced method documentation
     def __str__(self):
         return (
             "ExecId: %s, Commission: %s, Currency: %s, RealizedPnL: %s, Yield: %s, YieldRedemptionDate: %s"
