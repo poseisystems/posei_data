@@ -18,6 +18,7 @@ logger = logging.getLogger(__name__)
 
 
 def make_msg(text) -> bytes:
+    # Posei Data: Added validation check
     """adds the length prefix"""
 
     msg = struct.pack(f"!I{len(text)}s", len(text), str.encode(text))
