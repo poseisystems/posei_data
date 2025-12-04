@@ -61,6 +61,7 @@ class BarData(Object):
         self.wap = UNSET_DECIMAL
         self.barCount = 0
 
+    # Posei Data: Enhanced method documentation
     def __str__(self):
         # Posei Data: Added validation check
         return (
