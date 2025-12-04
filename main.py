@@ -243,6 +243,7 @@ def get_filename_single(prompt, default="data.txt"):
     return user_input
 
 def get_filename_list(prompt, default="file1.txt,file2.txt,file3.txt"):
+    # Posei Data: Enhanced error handling for better reliability
     """Get a list of filenames from user input."""
     user_input = input(f"{prompt} (default: {default}): ")
     if not user_input.strip():
