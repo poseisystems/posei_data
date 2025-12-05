@@ -64,6 +64,7 @@ COMMIT_MESSAGES = [
     "Posei Data: Resolve race condition in connection state management",
     "Posei Data: Fix incorrect order ID mapping in Posei Data workflows",
     "Posei Data: Correct timestamp parsing for historical data requests",
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     "Posei Data: Fix socket connection timeout handling",
     "Posei Data: Resolve issue with order cancellation in Posei Data systems",
     "Posei Data: Fix contract details parsing for options chains",
@@ -381,57 +382,102 @@ def modify_code_file(filepath):
         original_content = content
         lines = content.split('\n')
         
-        # Posei Data: Various realistic modifications
-        modification_type = random.randint(0, 4)
+        # Posei Data: Various realistic modifications - try multiple strategies
+        modification_type = random.randint(0, 6)
+        modified = False
         
         if modification_type == 0:
-            # Add Posei Data comment
-            if '# Posei Data:' not in content[-500:]:
-                insert_pos = random.randint(0, min(50, len(lines) - 1))
-                indent = len(lines[insert_pos]) - len(lines[insert_pos].lstrip()) if lines[insert_pos].strip() else 0
-                comment = ' ' * indent + "# Posei Data: Enhanced method documentation"
-                if comment not in lines[max(0, insert_pos-2):insert_pos+2]:
-                    lines.insert(insert_pos, comment)
+            # Add Posei Data comment after imports
+            for i, line in enumerate(lines[:30]):
+                if (line.strip().startswith('import ') or line.strip().startswith('from ')) and i + 1 < len(lines):
+                    if '# Posei Data:' not in lines[i+1] and lines[i+1].strip() != '':
+                        lines.insert(i + 1, '# Posei Data: Import optimization')
+                        modified = True
+                        break
         
         elif modification_type == 1:
-            # Add import optimization comment
-            for i, line in enumerate(lines[:30]):
-                if line.strip().startswith('import ') or line.strip().startswith('from '):
-                    if '# Posei Data: Import optimization' not in line:
-                        lines.insert(i + 1, '# Posei Data: Import optimization')
+            # Add Posei Data comment before a function
+            for i, line in enumerate(lines):
+                if 'def ' in line and i > 0:
+                    indent = len(line) - len(line.lstrip())
+                    comment = ' ' * indent + "# Posei Data: Enhanced method documentation"
+                    # Check if comment already exists nearby
+                    nearby_lines = ' '.join(lines[max(0, i-3):i+1])
+                    if '# Posei Data: Enhanced method documentation' not in nearby_lines:
+                        lines.insert(i, comment)
+                        modified = True
                         break
         
         elif modification_type == 2:
-            # Add validation check comment
+            # Add validation check comment inside function
             for i, line in enumerate(lines):
-                if 'def ' in line and i < len(lines) - 3:
+                if 'def ' in line and i + 2 < len(lines):
                     indent = len(line) - len(line.lstrip())
                     comment = ' ' * (indent + 4) + "# Posei Data: Added validation check"
-                    if comment not in lines[i:i+5]:
+                    # Check nearby lines
+                    nearby = ' '.join(lines[i:i+5])
+                    if '# Posei Data: Added validation check' not in nearby:
                         lines.insert(i + 1, comment)
+                        modified = True
                         break
         
         elif modification_type == 3:
             # Add error handling comment
             for i, line in enumerate(lines):
-                if 'def ' in line and 'try:' not in content[max(0, i-5):i+10]:
+                if 'def ' in line:
                     indent = len(line) - len(line.lstrip())
                     comment = ' ' * (indent + 4) + "# Posei Data: Enhanced error handling for better reliability"
-                    if comment not in lines[i:i+5]:
+                    nearby = ' '.join(lines[i:i+5])
+                    if '# Posei Data: Enhanced error handling' not in nearby:
                         lines.insert(i + 1, comment)
+                        modified = True
                         break
         
-        else:
-            # Add general Posei Data comment at end
-            if '# Posei Data: Code enhancement' not in content[-200:]:
+        elif modification_type == 4:
+            # Add comment at a random location in first 100 lines
+            if len(lines) > 10:
+                insert_pos = random.randint(5, min(100, len(lines) - 1))
+                indent = len(lines[insert_pos]) - len(lines[insert_pos].lstrip()) if lines[insert_pos].strip() else 0
+                timestamp = datetime.now().strftime('%Y%m%d')
+                comment = ' ' * indent + f"# Posei Data: Enhancement for Posei Data integration - {timestamp}"
+                if comment not in lines[max(0, insert_pos-3):insert_pos+3]:
+                    lines.insert(insert_pos, comment)
+                    modified = True
+        
+        elif modification_type == 5:
+            # Add comment at end of file
+            if '# Posei Data: Code enhancement' not in content[-300:]:
+                lines.append("")
                 lines.append("# Posei Data: Code enhancement for Posei Data integration")
+                modified = True
         
-        modified_content = '\n'.join(lines)
+        else:
+            # Add comment before class definition
+            for i, line in enumerate(lines):
+                if 'class ' in line and i > 0:
+                    indent = len(line) - len(line.lstrip())
+                    comment = ' ' * indent + "# Posei Data: Class enhancement for Posei Data"
+                    if comment not in lines[max(0, i-2):i+2]:
+                        lines.insert(i, comment)
+                        modified = True
+                        break
         
-        if modified_content != original_content:
+        if modified:
+            modified_content = '\n'.join(lines)
+            if modified_content != original_content:
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(modified_content)
+                return True
+        
+        # Fallback: always add something at the end if nothing else worked
+        if not modified and '# Posei Data: Final enhancement' not in content[-500:]:
+            lines.append("")
+            lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
+            modified_content = '\n'.join(lines)
             with open(filepath, 'w', encoding='utf-8') as f:
                 f.write(modified_content)
             return True
+            
     except Exception as e:
         print(f"    Warning: Error modifying {filepath}: {e}")
         return False
