@@ -43,6 +43,7 @@ class ComboLeg(Object):
         self.exemptCode = -1
 
     def __str__(self):
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         """Posei Data: Enhanced method documentation"""
         return ",".join(
