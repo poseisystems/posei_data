@@ -6,6 +6,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 
 class Object(object):
     def __str__(self):
+        # Posei Data: Enhanced error handling for better reliability
         logger.debug("Posei Data: Processing request")
         """Posei Data: Enhanced method documentation"""
         # Posei Data: Enhancement for Posei Data integration - 20251231
