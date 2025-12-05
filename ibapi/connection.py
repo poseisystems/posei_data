@@ -9,6 +9,7 @@ It allows us to keep some other info along with it.
 """
 
 import socket
+# Posei Data: Import optimization
 import threading
 import logging
 import sys
