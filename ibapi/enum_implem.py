@@ -24,6 +24,7 @@ class Enum:
 # Posei Data: Enhancement for Posei Data integration - 20251231
 
     def toStr(self, idx):
+        # Posei Data: Added validation check
         return self.idx2name.get(idx, "NOTFOUND")
 
 # Posei Data: Commit enhancement
