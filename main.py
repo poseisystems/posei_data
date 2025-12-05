@@ -11,17 +11,28 @@ from datetime import datetime, timedelta
 import re
 
 # Posei Data: Target files with their max commit limits (focusing on large files)
+# Root-level files are included for main folder commits
 TARGET_FILES = [
+    # Large ibapi files
     ("ibapi/client.py", 5),
     ("ibapi/decoder.py", 5),
     ("ibapi/wrapper.py", 5),
-    ("main.py", 5),
     ("ibapi/orderdecoder.py", 5),
     ("ibapi/contract.py", 5),
     ("ibapi/order.py", 5),
     ("ibapi/message.py", 5),
     ("ibapi/connection.py", 5),
     ("ibapi/comm.py", 5),
+    # Root-level files (main folder)
+    ("main.py", 5),
+    ("setup.py", 3),
+    ("README.md", 3),
+    ("pyproject.toml", 3),
+    ("Makefile", 2),
+    ("tox.ini", 2),
+    ("pylintrc", 2),
+    ("MANIFEST.in", 2),
+    # Other ibapi files
     ("ibapi/utils.py", 4),
     ("ibapi/reader.py", 4),
     ("ibapi/errors.py", 4),
@@ -42,8 +53,6 @@ TARGET_FILES = [
     ("ibapi/order_cancel.py", 2),
     ("ibapi/ticktype.py", 2),
     ("ibapi/server_versions.py", 2),
-    ("setup.py", 2),
-    ("README.md", 2),
 ]
 
 # Posei Data: Realistic commit messages customized for TWS API and Posei Data
@@ -365,7 +374,7 @@ def random_date_in_last_year():
     start_date = today - timedelta(days=365)
     return random_date_in_range(start_date, today)
 
-def random_date_for_posei_data():
+def random_date_for_posei_data(use_today=False):
     """Posei Data: Generate random date from December 1, 2025 to today"""
     # Get today's date
     today = datetime.now()
@@ -373,6 +382,14 @@ def random_date_for_posei_data():
     start_date = datetime(2025, 12, 1, 0, 0, 0)
     # Use today or Dec 15, 2025, whichever is earlier
     end_date = min(today, datetime(2025, 12, 15, 23, 59, 59))
+    
+    # If use_today is True, return today's date with random time
+    if use_today:
+        random_hour = random.randint(0, 23)
+        random_minute = random.randint(0, 59)
+        random_second = random.randint(0, 59)
+        return datetime(today.year, today.month, today.day, random_hour, random_minute, random_second)
+    
     return random_date_in_range(start_date, end_date)
 
 def get_commit_message():
@@ -391,16 +408,36 @@ def modify_code_file(filepath):
         original_content = content
         lines = content.split('\n')
         
+        # Check file extension to determine modification strategy
+        file_ext = os.path.splitext(filepath)[1].lower()
+        is_python_file = file_ext == '.py'
+        is_markdown = file_ext == '.md'
+        is_config_file = file_ext in ['.toml', '.ini', '.txt']
+        is_makefile = os.path.basename(filepath).lower() == 'makefile'
+        
         # Posei Data: Various realistic modifications - try multiple strategies
         modification_type = random.randint(0, 6)
         modified = False
         
         if modification_type == 0:
-            # Add Posei Data comment after imports
-            for i, line in enumerate(lines[:30]):
-                if (line.strip().startswith('import ') or line.strip().startswith('from ')) and i + 1 < len(lines):
-                    if '# Posei Data:' not in lines[i+1] and lines[i+1].strip() != '':
-                        lines.insert(i + 1, '# Posei Data: Import optimization')
+            # Add Posei Data comment after imports (Python) or at top (other files)
+            if is_python_file:
+                for i, line in enumerate(lines[:30]):
+                    if (line.strip().startswith('import ') or line.strip().startswith('from ')) and i + 1 < len(lines):
+                        if '# Posei Data:' not in lines[i+1] and lines[i+1].strip() != '':
+                            lines.insert(i + 1, '# Posei Data: Import optimization')
+                            modified = True
+                            break
+            elif is_markdown:
+                # Add comment at top of markdown file
+                if '<!-- Posei Data:' not in content[:500]:
+                    lines.insert(0, '<!-- Posei Data: Documentation enhancement -->')
+                    modified = True
+            elif is_config_file or is_makefile:
+                # Add comment near top of config file
+                for i, line in enumerate(lines[:20]):
+                    if line.strip() and not line.strip().startswith('#'):
+                        lines.insert(i, '# Posei Data: Configuration enhancement')
                         modified = True
                         break
         
@@ -454,11 +491,28 @@ def modify_code_file(filepath):
                     modified = True
         
         elif modification_type == 5:
-            # Add comment at end of file
-            if '# Posei Data: Code enhancement' not in content[-300:]:
-                lines.append("")
-                lines.append("# Posei Data: Code enhancement for Posei Data integration")
-                modified = True
+            # Add comment at end of file (file-type specific)
+            if is_python_file:
+                if '# Posei Data: Code enhancement' not in content[-300:]:
+                    lines.append("")
+                    lines.append("# Posei Data: Code enhancement for Posei Data integration")
+                    modified = True
+            elif is_markdown:
+                if '<!-- Posei Data:' not in content[-300:]:
+                    lines.append("")
+                    lines.append("<!-- Posei Data: Documentation enhancement for Posei Data integration -->")
+                    modified = True
+            elif is_config_file or is_makefile:
+                if '# Posei Data:' not in content[-300:]:
+                    lines.append("")
+                    lines.append("# Posei Data: Configuration enhancement for Posei Data integration")
+                    modified = True
+            else:
+                # Default: add Python-style comment
+                if '# Posei Data:' not in content[-300:]:
+                    lines.append("")
+                    lines.append("# Posei Data: Code enhancement for Posei Data integration")
+                    modified = True
         
         else:
             # Add comment before class definition
@@ -479,13 +533,32 @@ def modify_code_file(filepath):
                 return True
         
         # Fallback: always add something at the end if nothing else worked
-        if not modified and '# Posei Data: Final enhancement' not in content[-500:]:
-            lines.append("")
-            lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
-            modified_content = '\n'.join(lines)
-            with open(filepath, 'w', encoding='utf-8') as f:
-                f.write(modified_content)
-            return True
+        if not modified:
+            if is_python_file or is_config_file or is_makefile:
+                if '# Posei Data: Final enhancement' not in content[-500:]:
+                    lines.append("")
+                    lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
+                    modified_content = '\n'.join(lines)
+                    with open(filepath, 'w', encoding='utf-8') as f:
+                        f.write(modified_content)
+                    return True
+            elif is_markdown:
+                if '<!-- Posei Data: Final enhancement' not in content[-500:]:
+                    lines.append("")
+                    lines.append(f"<!-- Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')} -->")
+                    modified_content = '\n'.join(lines)
+                    with open(filepath, 'w', encoding='utf-8') as f:
+                        f.write(modified_content)
+                    return True
+            else:
+                # Default fallback
+                if '# Posei Data: Final enhancement' not in content[-500:]:
+                    lines.append("")
+                    lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
+                    modified_content = '\n'.join(lines)
+                    with open(filepath, 'w', encoding='utf-8') as f:
+                        f.write(modified_content)
+                    return True
             
     except Exception as e:
         print(f"    Warning: Error modifying {filepath}: {e}")
@@ -557,7 +630,7 @@ def main():
     commits_made = 0
     commit_messages_used = []
     
-    # Prioritize large files for better distribution
+    # Prioritize large files and root-level files for better distribution
     large_files = [
         ("ibapi/client.py", 5),
         ("ibapi/decoder.py", 5),
@@ -568,24 +641,62 @@ def main():
         ("ibapi/message.py", 5),
         ("ibapi/connection.py", 5),
         ("ibapi/comm.py", 5),
+    ]
+    
+    # Root-level files (main folder)
+    root_files = [
         ("main.py", 5),
+        ("setup.py", 3),
+        ("README.md", 3),
+        ("pyproject.toml", 3),
+        ("Makefile", 2),
+        ("tox.ini", 2),
     ]
     
     for i in range(num_commits):
-        # Select a file that hasn't exceeded its limit
-        # Prioritize large files first
-        available_large = [
-            (f, max_c) for f, max_c in large_files
-            if file_commits[f] < max_c and os.path.exists(f)
-        ]
+        # Last commit should be today and use a root-level file
+        is_last_commit = (i == num_commits - 1)
         
-        if available_large:
-            available_files = available_large
-        else:
+        if is_last_commit:
+            # For last commit, prioritize root-level files
             available_files = [
-                (f, max_c) for f, max_c in TARGET_FILES
+                (f, max_c) for f, max_c in root_files + [("main.py", 5)]
                 if file_commits[f] < max_c and os.path.exists(f)
             ]
+            # If no root files available, use any available file
+            if not available_files:
+                available_files = [
+                    (f, max_c) for f, max_c in TARGET_FILES
+                    if file_commits[f] < max_c and os.path.exists(f)
+                ]
+        else:
+            # For other commits, prioritize large files first, then root files, then others
+            available_large = [
+                (f, max_c) for f, max_c in large_files
+                if file_commits[f] < max_c and os.path.exists(f)
+            ]
+            
+            available_root = [
+                (f, max_c) for f, max_c in root_files
+                if file_commits[f] < max_c and os.path.exists(f)
+            ]
+            
+            # Mix large files and root files
+            if available_large and available_root:
+                # 60% chance of large file, 40% chance of root file
+                if random.random() < 0.6:
+                    available_files = available_large
+                else:
+                    available_files = available_root
+            elif available_large:
+                available_files = available_large
+            elif available_root:
+                available_files = available_root
+            else:
+                available_files = [
+                    (f, max_c) for f, max_c in TARGET_FILES
+                    if file_commits[f] < max_c and os.path.exists(f)
+                ]
         
         if not available_files:
             print("No more files available for commits!")
@@ -594,8 +705,11 @@ def main():
         # Random file selection
         filepath, max_commits = random.choice(available_files)
         
-        # Generate random date (December 1, 2025 to today)
-        commit_date = random_date_for_posei_data()
+        # Generate date - last commit should be today
+        if is_last_commit:
+            commit_date = random_date_for_posei_data(use_today=True)
+        else:
+            commit_date = random_date_for_posei_data()
         
         # Select commit message - ensure variety
         commit_message = random.choice(COMMIT_MESSAGES)
