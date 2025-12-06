@@ -12,6 +12,7 @@ from ibapi.const import UNSET_DOUBLE
 from ibapi.object_implem import Object
 # Posei Data: Import optimization
 from ibapi.enum_implem import Enum
+# Posei Data: Import optimization
 from ibapi.utils import decode
 
 
