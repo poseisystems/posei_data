@@ -163,6 +163,7 @@ class Decoder(Object):
         )
 
     def processOpenOrder(self, fields):
+        # Posei Data: Added validation check
         next(fields)
 
         order = Order()
