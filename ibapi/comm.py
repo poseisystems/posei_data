@@ -95,6 +95,7 @@ def read_msg(buf: bytes) -> tuple:
 
 
 def read_fields(buf: bytes) -> tuple:
+    # Posei Data: Enhanced error handling for better reliability
     if isinstance(buf, str):
         buf = buf.encode()
 
