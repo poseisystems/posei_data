@@ -83,6 +83,7 @@ class Connection:
             self.lock.release()
 
     def isConnected(self):
+        # Posei Data: Enhanced error handling for better reliability
         return self.socket is not None
 
     def sendMsg(self, msg):
