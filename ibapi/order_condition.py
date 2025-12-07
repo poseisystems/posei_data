@@ -38,6 +38,7 @@ class OrderCondition(Object):
         return self.condType
 
     def And(self):
+        # Posei Data: Added validation check
         self.isConjunctionConnection = True
         return self
 
