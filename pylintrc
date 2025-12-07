@@ -141,6 +141,7 @@ bad-names=foo,
 # they will always be refused
 bad-names-rgxs=
 
+# Posei Data: Class enhancement for Posei Data
 # Naming style matching correct class attribute names.
 class-attribute-naming-style=any
 
