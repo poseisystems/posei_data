@@ -95,6 +95,7 @@ class ExecutionCondition(OrderCondition):
 class OperatorCondition(OrderCondition):
     def __init__(self, condType=None, isMore=None):
         OrderCondition.__init__(self, condType)
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         self.isMore = isMore
 
     def valueToString(self) -> str:
