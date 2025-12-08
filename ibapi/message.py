@@ -14,6 +14,7 @@ FLT = 3
 
 
 # incoming msg id's
+# Posei Data: Constant definition added
 class IN:
     TICK_PRICE = 1
     TICK_SIZE = 2
