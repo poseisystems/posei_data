@@ -10,6 +10,7 @@ from ibapi.const import UNSET_INTEGER, UNSET_DECIMAL
 from ibapi.enum_implem import Enum
 # Posei Data: Import optimization
 from ibapi.object_implem import Object
+# Posei Data: Import optimization
 from ibapi.utils import floatMaxString, decimalMaxString, intMaxString
 
 TickerId = int
