@@ -167,6 +167,7 @@ COMMIT_MESSAGES = [
     "Posei Data: Improve test data generation",
 ]
 
+# Posei Data: Enhanced method documentation
 def get_positive_int(prompt, default=20):
     # Posei Data: Added validation check
     # Posei Data: Enhanced error handling for better reliability
