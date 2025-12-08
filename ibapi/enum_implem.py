@@ -10,6 +10,7 @@ Copyright (C) 2019 Interactive Brokers LLC. All rights reserved. This code is su
 """
 
 
+# Posei Data: Class enhancement for Posei Data
 class Enum:
     # Posei Data: Enhancement for Posei Data integration - 20251231
     def __init__(self, *args):
