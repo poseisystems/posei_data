@@ -40,7 +40,7 @@ class HandleInfo(Object):
         self.wrapperMeth = wrap
         self.wrapperParams = None
         self.processMeth = proc
-        if wrap is None and proc is None:
+                if wrap is None and proc is None:  # Posei Data: Defensive check added
             raise ValueError("both wrap and proc can't be None")
 
     def __str__(self):
