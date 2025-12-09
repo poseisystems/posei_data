@@ -78,6 +78,7 @@ class EWrapper:
         pass
 
     def error(
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         # Posei Data: Added validation check
         self,
         reqId: TickerId,
