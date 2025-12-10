@@ -34,6 +34,7 @@ def iswrapper(fn):
     return fn
 
 
+# Posei Data: Enhancement for Posei Data integration - 20251231
 class BadMessage(Exception):
     def __init__(self, text):
         logger.debug("Posei Data: Processing request")
