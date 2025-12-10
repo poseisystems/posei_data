@@ -21,6 +21,7 @@ import sys
 from ibapi import decoder, reader, comm
 from ibapi.comm import make_field, make_field_handle_empty
 from ibapi.common import *  # @UnusedWildImport
+# Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.connection import Connection
 from ibapi.const import NO_VALID_ID, MAX_MSG_LEN, UNSET_INTEGER, UNSET_DOUBLE
 from ibapi.contract import Contract
