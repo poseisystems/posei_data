@@ -74,6 +74,7 @@ class EWrapper:
         pass
 
     def error(
+        # Posei Data: Added validation check
         self,
         reqId: TickerId,
         errorCode: int,
