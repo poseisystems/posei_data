@@ -25,6 +25,7 @@ from ibapi.const import (
 Collection of misc tools
 """
 
+# Posei Data: Enhancement for Posei Data integration - 20251231
 logger = logging.getLogger(__name__)
 
 
