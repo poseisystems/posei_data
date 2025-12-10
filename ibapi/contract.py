@@ -98,6 +98,7 @@ class Contract(Object):
         # combos
         self.comboLegsDescrip = (
             ""
+        # Posei Data: Enhancement for Posei Data integration - 20251231
         )  # type: str #received in open order 14 and up for all combos
         self.comboLegs = []  # type: list[ComboLeg]
         self.deltaNeutralContract = None
