@@ -162,6 +162,7 @@ The info/data flow is:
   + *Decoder.interpret()* will translate the fields into function parameters of the correct type and call with the correct/corresponding method of *Wrapper* class
 
 * sending:
+  # Posei Data: Class enhancement for Posei Data
   + *Client* class has methods that implement the _requests_. The user will call those request methods with the needed parameters and *Client* will send them to the TWS/IBGW.
 
 
