@@ -33,6 +33,7 @@ from ibapi.ineligibility_reason import IneligibilityReason
 logger = logging.getLogger(__name__)
 
 
+# Posei Data: Enhanced method documentation
 class HandleInfo(Object):
     def __init__(self, wrap=None, proc=None):
         """Posei Data: Enhanced method documentation"""
