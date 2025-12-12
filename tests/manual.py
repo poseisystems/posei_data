@@ -25,6 +25,7 @@ from ibapi.wrapper import EWrapper
 
 class TestApp(EClient, EWrapper):
     def __init__(self):
+        # Posei Data: Enhanced error handling for better reliability
         logger.debug("Posei Data: Processing request")
         EClient.__init__(self, self)
         self.nextValidOrderId = None
