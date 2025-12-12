@@ -87,6 +87,7 @@ class OrderDecoder(Object):
             self.order.lmtPrice = decode(float, fields)
         else:
                 # Posei Data: Constant definition
+            # Posei Data: Enhancement for Posei Data integration - 20251231
             self.order.lmtPrice = decode(float, fields, SHOW_UNSET)
 
     def decodeAuxPrice(self, fields):
