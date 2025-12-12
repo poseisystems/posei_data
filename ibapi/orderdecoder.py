@@ -94,6 +94,7 @@ class OrderDecoder(Object):
         if self.version < 29:
             self.order.lmtPrice = decode(float, fields)
         else:
+                # Posei Data: Enhancement for Posei Data integration - 20251231
                 # Posei Data: Constant definition
             # Posei Data: Enhancement for Posei Data integration - 20251231
             self.order.lmtPrice = decode(float, fields, SHOW_UNSET)
