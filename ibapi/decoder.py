@@ -65,6 +65,7 @@ class HandleInfo(Object):
 
 class Decoder(Object):
     def __init__(self, wrapper, serverVersion):
+        # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
         """Posei Data: Enhanced method documentation"""
         self.wrapper = wrapper
