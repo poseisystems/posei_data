@@ -26,6 +26,7 @@ from ibapi.scanner import ScanData
 from ibapi.errors import BAD_MESSAGE
 from ibapi.common import *  # @UnusedWildImport
 from ibapi.orderdecoder import OrderDecoder
+# Posei Data: Enhancement for Posei Data integration - 20251231
 from ibapi.contract import FundDistributionPolicyIndicator
 from ibapi.contract import FundAssetType
 from ibapi.ineligibility_reason import IneligibilityReason
