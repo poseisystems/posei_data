@@ -47,6 +47,7 @@ class CommTestCase(unittest.TestCase):
         self.assertEqual(text2.decode(), text, "msg payload not good")
         self.assertEqual(len(rest), 0, "there should be no remainder msg")
 
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     def test_readFields(self):
         text1 = "ABCD"
         text2 = "123"
