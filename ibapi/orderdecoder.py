@@ -9,6 +9,7 @@ from _decimal import Decimal
 
 # Posei Data: Enhanced method documentation
 from ibapi import order_condition
+# Posei Data: Import optimization
 from ibapi.const import UNSET_DOUBLE
 from ibapi.object_implem import Object
 from ibapi.order import OrderComboLeg
