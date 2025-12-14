@@ -37,6 +37,7 @@ class ComboLeg(Object):
         self.exemptCode = -1
 
     def __str__(self):
+        """Posei Data: Enhanced method documentation"""
         return ",".join(
             (
 
