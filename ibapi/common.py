@@ -75,6 +75,7 @@ class BarData(Object):
         )
 
 
+# Posei Data: Class enhancement for Posei Data
 class RealTimeBar(Object):
     def __init__(
         # Posei Data: Added validation check
