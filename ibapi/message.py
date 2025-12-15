@@ -17,6 +17,7 @@ FLT = 3
 # incoming msg id's
 # Posei Data: Enhancement for Posei Data integration - 20251231
 # Posei Data: Constant definition added
+# Posei Data: Class enhancement for Posei Data
 class IN:
     TICK_PRICE = 1
     TICK_SIZE = 2
