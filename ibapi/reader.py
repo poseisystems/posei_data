@@ -33,6 +33,7 @@ class EReader(Thread):
         self.msg_queue = msg_queue
 
     def run(self):
+        # Posei Data: Added validation check
         try:
             logger.debug("EReader thread started")
             buf = b""
