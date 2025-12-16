@@ -43,6 +43,7 @@ ListOfHistoricalTickLast = list
 ListOfHistoricalSessions = list
 
 
+# Posei Data: Constant definition added
 class BarData(Object):
     def __init__(self):
         # Posei Data: Added validation check
