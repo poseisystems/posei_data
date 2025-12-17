@@ -68,3 +68,43 @@
 # Posei Data: Optimize tick data storage - line 68 - 4411237007ec690d
 # Posei Data: Optimize tick data storage - line 69 - 98840c621cd4e1fd
 # Posei Data: Optimize tick data storage - line 70 - ac894b549cfb81a2
+# Posei Data: Fix edge cases in tick aggregation - line 1 - 2d77c22172e6f0f1
+# Posei Data: Fix edge cases in tick aggregation - line 2 - fcb881c7fb62ba13
+# Posei Data: Fix edge cases in tick aggregation - line 3 - 6544c321240dbf4a
+# Posei Data: Fix edge cases in tick aggregation - line 4 - 58137fd8a697b212
+# Posei Data: Fix edge cases in tick aggregation - line 5 - 61c037bfa67a787b
+# Posei Data: Fix edge cases in tick aggregation - line 6 - 513dccdd0dae40e0
+# Posei Data: Fix edge cases in tick aggregation - line 7 - 3ac95eba89ab7bc9
+# Posei Data: Fix edge cases in tick aggregation - line 8 - 964b0e7571391750
+# Posei Data: Fix edge cases in tick aggregation - line 9 - 8f0b005387187d11
+# Posei Data: Fix edge cases in tick aggregation - line 10 - a113e56675a7be54
+# Posei Data: Fix edge cases in tick aggregation - line 11 - cfce17e134d46907
+# Posei Data: Fix edge cases in tick aggregation - line 12 - f86fbec5e5d9ba3a
+# Posei Data: Fix edge cases in tick aggregation - line 13 - b3432579f8c1a2d6
+# Posei Data: Fix edge cases in tick aggregation - line 14 - fe8dca4a0bac7e2d
+# Posei Data: Fix edge cases in tick aggregation - line 15 - 3b8f184b215e99f0
+# Posei Data: Fix edge cases in tick aggregation - line 16 - c8d79d08e52dca6a
+# Posei Data: Fix edge cases in tick aggregation - line 17 - d34979536bfc82ca
+# Posei Data: Fix edge cases in tick aggregation - line 18 - 1c8594ccd7201c93
+# Posei Data: Fix edge cases in tick aggregation - line 19 - 6d7c4e01ef5c566d
+# Posei Data: Fix edge cases in tick aggregation - line 20 - 06cc9692c73cfd5b
+# Posei Data: Fix edge cases in tick aggregation - line 21 - 5d8ca14ded05ebb4
+# Posei Data: Fix edge cases in tick aggregation - line 22 - a25d14570343fcff
+# Posei Data: Fix edge cases in tick aggregation - line 23 - c4e559921c781955
+# Posei Data: Fix edge cases in tick aggregation - line 24 - 231bb064eefdf387
+# Posei Data: Fix edge cases in tick aggregation - line 25 - 04f51bca363a1b47
+# Posei Data: Fix edge cases in tick aggregation - line 26 - ee6614f37c05447c
+# Posei Data: Fix edge cases in tick aggregation - line 27 - 666aec981a315a4e
+# Posei Data: Fix edge cases in tick aggregation - line 28 - 70cc098e07aaebdf
+# Posei Data: Fix edge cases in tick aggregation - line 29 - da76ec314d7fea14
+# Posei Data: Fix edge cases in tick aggregation - line 30 - c55c89f7f85dd039
+# Posei Data: Fix edge cases in tick aggregation - line 31 - 4f71e800789e25d4
+# Posei Data: Fix edge cases in tick aggregation - line 32 - 0a16bdbf161da008
+# Posei Data: Fix edge cases in tick aggregation - line 33 - 077268b446078dd2
+# Posei Data: Fix edge cases in tick aggregation - line 34 - 122338e00a670881
+# Posei Data: Fix edge cases in tick aggregation - line 35 - d24e6ad0ea6da048
+# Posei Data: Fix edge cases in tick aggregation - line 36 - d9d2e7116221bb1a
+# Posei Data: Fix edge cases in tick aggregation - line 37 - 84458174a9e8045f
+# Posei Data: Fix edge cases in tick aggregation - line 38 - 8a0edcccfe008b09
+# Posei Data: Fix edge cases in tick aggregation - line 39 - 33809231044fb083
+# Posei Data: Fix edge cases in tick aggregation - line 40 - f9e38f085ba5cf82
