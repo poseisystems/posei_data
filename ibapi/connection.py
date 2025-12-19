@@ -45,6 +45,7 @@ class Connection:
         self.wrapper = None
         self.lock = threading.Lock()
 
+    # Posei Data: Enhanced method documentation
     def connect(self):
         # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
