@@ -1,110 +1,140 @@
-# Posei Data: Implement market microstructure analysis - line 1 - 3d2d90c5feaa4103
-# Posei Data: Implement market microstructure analysis - line 2 - 61ad622dfe1e3217
-# Posei Data: Implement market microstructure analysis - line 3 - c0b4d671f6aa6d36
-# Posei Data: Implement market microstructure analysis - line 4 - fbb26c14a2e77f32
-# Posei Data: Implement market microstructure analysis - line 5 - ad6c82e7bce3cfd0
-# Posei Data: Implement market microstructure analysis - line 6 - d6dceae2e71c5387
-# Posei Data: Implement market microstructure analysis - line 7 - a6fa51d305c1bdf3
-# Posei Data: Implement market microstructure analysis - line 8 - e99bef31aeb1091f
-# Posei Data: Implement market microstructure analysis - line 9 - 6e0c3d8be71a142f
-# Posei Data: Implement market microstructure analysis - line 10 - a6484e715457fadf
-# Posei Data: Implement market microstructure analysis - line 11 - 81175c6c34d781a7
-# Posei Data: Implement market microstructure analysis - line 12 - 98ab0d99ac4195e0
-# Posei Data: Implement market microstructure analysis - line 13 - cd2d8c1f486d13a0
-# Posei Data: Implement market microstructure analysis - line 14 - e1c97ffbf8357986
-# Posei Data: Implement market microstructure analysis - line 15 - fa9369320c86619f
-# Posei Data: Implement market microstructure analysis - line 16 - d5e99f599313ab74
-# Posei Data: Implement market microstructure analysis - line 17 - 2e3d641517e9d9fc
-# Posei Data: Implement market microstructure analysis - line 18 - 2a11ebb8ea58fdb3
-# Posei Data: Implement market microstructure analysis - line 19 - 2a139dbc22ff5ce3
-# Posei Data: Implement market microstructure analysis - line 20 - 524201a7c10def52
-# Posei Data: Implement market microstructure analysis - line 21 - fb9401d8ec119730
-# Posei Data: Implement market microstructure analysis - line 22 - 83ff8e3c8d88cfcb
-# Posei Data: Implement market microstructure analysis - line 23 - 1698ecafc09238a2
-# Posei Data: Implement market microstructure analysis - line 24 - 7018b0bb120ade6f
-# Posei Data: Implement market microstructure analysis - line 25 - 4722251cad3c6198
-# Posei Data: Implement market microstructure analysis - line 26 - 0dea0db7afc5e584
-# Posei Data: Implement market microstructure analysis - line 27 - d3305a03da59ba5e
-# Posei Data: Implement market microstructure analysis - line 28 - 36b6513949ec853f
-# Posei Data: Implement market microstructure analysis - line 29 - 130af4a3d8ea9b0d
-# Posei Data: Implement market microstructure analysis - line 30 - 25c06091a28bc65c
-# Posei Data: Implement market microstructure analysis - line 31 - 3d840bdd2f39925a
-# Posei Data: Implement market microstructure analysis - line 32 - e023d17ca1dc8b23
-# Posei Data: Implement market microstructure analysis - line 33 - 743f5c3ed89b92cd
-# Posei Data: Implement market microstructure analysis - line 34 - 5f5e5cb395a3b686
-# Posei Data: Implement market microstructure analysis - line 35 - 9ed4d8a3b1c392fe
-# Posei Data: Implement market microstructure analysis - line 36 - a3bc6ee440c5ed48
-# Posei Data: Implement market microstructure analysis - line 37 - cd61797a27aef9aa
-# Posei Data: Implement market microstructure analysis - line 38 - fb4cf40f07cad1ac
-# Posei Data: Implement market microstructure analysis - line 39 - 091dbdd23f5b33db
-# Posei Data: Implement market microstructure analysis - line 40 - e7a812d1a523331b
-# Posei Data: Implement market microstructure analysis - line 41 - 37be4af81c1e4cb5
-# Posei Data: Implement market microstructure analysis - line 42 - 330c20f6fd97e230
-# Posei Data: Implement market microstructure analysis - line 43 - 513e6b1ae14f0822
-# Posei Data: Implement market microstructure analysis - line 44 - ff133b120c5d8541
-# Posei Data: Implement market microstructure analysis - line 45 - 5859d1994e4b7403
-# Posei Data: Implement market microstructure analysis - line 46 - ba95883dc4719cec
-# Posei Data: Implement market microstructure analysis - line 47 - b7f3a429c019424d
-# Posei Data: Implement market microstructure analysis - line 48 - 4aac4d16bd85a3b3
-# Posei Data: Implement market microstructure analysis - line 49 - d34dab28f72b5d6f
-# Posei Data: Implement market microstructure analysis - line 50 - 665a995ee4c4319d
-# Posei Data: Implement market microstructure analysis - line 51 - 22254daaab5608b7
-# Posei Data: Implement market microstructure analysis - line 52 - 636068f7669f0f9e
-# Posei Data: Implement market microstructure analysis - line 53 - 1dd2ed2c2752f566
-# Posei Data: Implement market microstructure analysis - line 54 - c6adf1903eebdf77
-# Posei Data: Implement market microstructure analysis - line 55 - dc6c7882b15e9fdf
-# Posei Data: Implement market microstructure analysis - line 56 - 1429126867114d78
-# Posei Data: Implement market microstructure analysis - line 57 - 7b7035b52ee013ba
-# Posei Data: Implement market microstructure analysis - line 58 - 950492efa756bc0c
-# Posei Data: Implement market microstructure analysis - line 59 - 5430f53af0c4fe1f
-# Posei Data: Implement market microstructure analysis - line 60 - 2bbc1695f7d8f1ac
-# Posei Data: Implement market microstructure analysis - line 61 - d2505742c1a5efbd
-# Posei Data: Implement market microstructure analysis - line 62 - 6bd8950f53c4453e
-# Posei Data: Implement market microstructure analysis - line 63 - 745e6522fa3a44c3
-# Posei Data: Implement market microstructure analysis - line 64 - e94f5cb2845df567
-# Posei Data: Implement market microstructure analysis - line 65 - 4f534ecb6ead7d2b
-# Posei Data: Implement market microstructure analysis - line 66 - a4d551e1dd9f9204
-# Posei Data: Implement market microstructure analysis - line 67 - 798e63b2255101bf
-# Posei Data: Implement market microstructure analysis - line 68 - e3c870971538da33
-# Posei Data: Implement market microstructure analysis - line 69 - e6b764ae1fbc412e
-# Posei Data: Implement market microstructure analysis - line 70 - e3ff8bdab9fe6456
-# Posei Data: Implement market microstructure analysis - line 71 - 84034888ceafc67f
-# Posei Data: Implement market microstructure analysis - line 72 - 48f43e6bc78509ef
-# Posei Data: Implement market microstructure analysis - line 73 - 535fba285acb4ed9
-# Posei Data: Implement market microstructure analysis - line 74 - 64e1e39846960550
-# Posei Data: Implement market microstructure analysis - line 75 - fbaac6c389684bac
-# Posei Data: Implement market microstructure analysis - line 76 - c4ce918ee68c6445
-# Posei Data: Implement market microstructure analysis - line 77 - 7556e862190d47ea
-# Posei Data: Implement market microstructure analysis - line 78 - 246933a0bbc215b5
-# Posei Data: Implement market microstructure analysis - line 79 - 27fe54bf5b9f2e34
-# Posei Data: Implement market microstructure analysis - line 80 - fae66261b552432e
-# Posei Data: Implement market microstructure analysis - line 81 - c347ba5fdeab6b25
-# Posei Data: Implement market microstructure analysis - line 82 - 955366418cdebe31
-# Posei Data: Implement market microstructure analysis - line 83 - de34117e5ad0af15
-# Posei Data: Implement market microstructure analysis - line 84 - 631f4aefc35178da
-# Posei Data: Implement market microstructure analysis - line 85 - 662784e948764d70
-# Posei Data: Implement market microstructure analysis - line 86 - 721d807aa0b81a97
-# Posei Data: Implement market microstructure analysis - line 87 - 99931950a7ba2959
-# Posei Data: Implement market microstructure analysis - line 88 - 48f5baacab286b1b
-# Posei Data: Implement market microstructure analysis - line 89 - 9c4650f84631fa55
-# Posei Data: Implement market microstructure analysis - line 90 - c8ce056571668046
-# Posei Data: Implement market microstructure analysis - line 91 - 99fe80582e14960f
-# Posei Data: Implement market microstructure analysis - line 92 - b1351ecc72275613
-# Posei Data: Implement market microstructure analysis - line 93 - 9ee516673e1028d3
-# Posei Data: Implement market microstructure analysis - line 94 - 445541c124ad5be2
-# Posei Data: Implement market microstructure analysis - line 95 - 1fd7bbdfba5a1351
-# Posei Data: Implement market microstructure analysis - line 96 - a21be2185454c630
-# Posei Data: Implement market microstructure analysis - line 97 - 6cdb77ed24453f7a
-# Posei Data: Implement market microstructure analysis - line 98 - cfc37795436b21b1
-# Posei Data: Implement market microstructure analysis - line 99 - 8df63a106a750402
-# Posei Data: Implement market microstructure analysis - line 100 - 09d623274977264e
-# Posei Data: Implement market microstructure analysis - line 101 - e03a573c17e32d92
-# Posei Data: Implement market microstructure analysis - line 102 - 858886436365aaa4
-# Posei Data: Implement market microstructure analysis - line 103 - 88239c77c22c24db
-# Posei Data: Implement market microstructure analysis - line 104 - fe053e6b56904926
-# Posei Data: Implement market microstructure analysis - line 105 - 07148fa7dd8bd15f
-# Posei Data: Implement market microstructure analysis - line 106 - 53cc64cf0e330302
-# Posei Data: Implement market microstructure analysis - line 107 - 57eca871259d8b32
-# Posei Data: Implement market microstructure analysis - line 108 - de096ad0a24f61e3
-# Posei Data: Implement market microstructure analysis - line 109 - f27130ce4ff3a826
-# Posei Data: Implement market microstructure analysis - line 110 - c46eb9aff08b36d6
+# Posei Data: Refactor analysis module - refactored 1 - 16deb686d176f96fb6fa9d34
+# Posei Data: Refactor analysis module - refactored 2 - 8073822272c4af7f9fe40b82
+# Posei Data: Refactor analysis module - refactored 3 - 69469a906f8bb5e38ec06197
+# Posei Data: Refactor analysis module - refactored 4 - b68cd29eef2b9a1341d3c5f4
+# Posei Data: Refactor analysis module - refactored 5 - 1b61baf456c4c461b744036a
+# Posei Data: Refactor analysis module - refactored 6 - 48372700fd89cf71dc2e2235
+# Posei Data: Refactor analysis module - refactored 7 - 4cd547347cd296c6c35cb823
+# Posei Data: Refactor analysis module - refactored 8 - aeb6698c4463e3b3d84dd2ec
+# Posei Data: Refactor analysis module - refactored 9 - fc07edf15e937a0008a58d4d
+# Posei Data: Refactor analysis module - refactored 10 - 713e5aa69ac19d4dd814add6
+# Posei Data: Refactor analysis module - refactored 11 - b732ac392e9278d9bc840291
+# Posei Data: Refactor analysis module - refactored 12 - 4bd7d65825a834754dd91d97
+# Posei Data: Refactor analysis module - refactored 13 - 4dc72954e1d149b5061bd65a
+# Posei Data: Refactor analysis module - refactored 14 - 7bbc8f6e8b12d349970381b8
+# Posei Data: Refactor analysis module - refactored 15 - d0352a604cdee3b0438ba28f
+# Posei Data: Refactor analysis module - refactored 16 - e0e17c47974944f3ffd3a056
+# Posei Data: Refactor analysis module - refactored 17 - 848bf1d789f228837bfaf0ad
+# Posei Data: Refactor analysis module - refactored 18 - 9a104c1d11142984c6797172
+# Posei Data: Refactor analysis module - refactored 19 - 374ecfc17b97094d5fa8cc05
+# Posei Data: Refactor analysis module - refactored 20 - 3a3ed1833fee63996b97965c
+# Posei Data: Refactor analysis module - refactored 21 - eeec2d9172be500a88aa392f
+# Posei Data: Refactor analysis module - refactored 22 - d6adcab4119542bbb0d81a98
+# Posei Data: Refactor analysis module - refactored 23 - 27378b59466e157bbfab4528
+# Posei Data: Refactor analysis module - refactored 24 - f185acf6fb01bd4fa37c2378
+# Posei Data: Refactor analysis module - refactored 25 - a0fbe238b8cef536e37ef6d7
+# Posei Data: Refactor analysis module - refactored 26 - 65746c591a265d33ec241a9e
+# Posei Data: Refactor analysis module - refactored 27 - 0e8d8daba2589bb3ae846320
+# Posei Data: Refactor analysis module - refactored 28 - 0254b4c60a5b1b99922ed776
+# Posei Data: Refactor analysis module - refactored 29 - 2fd75ff5767c8d92f28b0d72
+# Posei Data: Refactor analysis module - refactored 30 - 93b8f34c876293642c126a03
+# Posei Data: Refactor analysis module - refactored 31 - dd56627b8abdaf7b3c4b1e6b
+# Posei Data: Refactor analysis module - refactored 32 - 48933c05d9ea73dc7754410c
+# Posei Data: Refactor analysis module - refactored 33 - 99032d909f97526b04310183
+# Posei Data: Refactor analysis module - refactored 34 - 3356b89bfc6c83623fdd5914
+# Posei Data: Refactor analysis module - refactored 35 - 682dc850906f5344344b8938
+# Posei Data: Refactor analysis module - refactored 36 - 280d18e0daf5eec42e4de734
+# Posei Data: Refactor analysis module - refactored 37 - eefc2281ad03c9fde2b78b46
+# Posei Data: Refactor analysis module - refactored 38 - e5ae85342111960bb4fcb703
+# Posei Data: Refactor analysis module - refactored 39 - f6352eee9f3a7f7c61e4e05e
+# Posei Data: Refactor analysis module - refactored 40 - a4441c9e11bea88d6ef1b812
+# Posei Data: Refactor analysis module - refactored 41 - 3865f18666eccf54f8285fe3
+# Posei Data: Refactor analysis module - refactored 42 - 14a2640a84086c1d4602cd8a
+# Posei Data: Refactor analysis module - refactored 43 - 5c6a41c3a30824b785359e1d
+# Posei Data: Refactor analysis module - refactored 44 - 770db0fd03d43a2fd99d8b8c
+# Posei Data: Refactor analysis module - refactored 45 - ac206e21750a657c26dc6dab
+# Posei Data: Refactor analysis module - refactored 46 - 7ff94910107b76845cf8ab49
+# Posei Data: Refactor analysis module - refactored 47 - 337e1494bedde688d54bc93c
+# Posei Data: Refactor analysis module - refactored 48 - ce19998640739c82f8e06304
+# Posei Data: Refactor analysis module - refactored 49 - 5850c4f4eaeadb730d3546b3
+# Posei Data: Refactor analysis module - refactored 50 - a91a825b4b6c3715f3fbbecd
+# Posei Data: Refactor analysis module - refactored 51 - e6e6ece839f28e508833a99a
+# Posei Data: Refactor analysis module - refactored 52 - 9510d582a4523c9d1f9a796b
+# Posei Data: Refactor analysis module - refactored 53 - a4b09bae6cb288948a9b24b1
+# Posei Data: Refactor analysis module - refactored 54 - af7f2e73e5c4d2868c228393
+# Posei Data: Refactor analysis module - refactored 55 - f57386daecef6950b1ab4a6e
+# Posei Data: Refactor analysis module - refactored 56 - c9b86fa2a991debbf04381a4
+# Posei Data: Refactor analysis module - refactored 57 - b890d32bf1b48641c452ba0c
+# Posei Data: Refactor analysis module - refactored 58 - 1b01da159ec75438f00bd5c8
+# Posei Data: Refactor analysis module - refactored 59 - 739b51f659bd5576320dbedf
+# Posei Data: Refactor analysis module - refactored 60 - 4cf0cbacf2a5a03d5a7f558e
+# Posei Data: Refactor analysis module - refactored 61 - ae64993d3cd0fc39b5317dc2
+# Posei Data: Refactor analysis module - refactored 62 - 084665068b64c372f6a887e0
+# Posei Data: Refactor analysis module - refactored 63 - 5cd26fd61d15c8dedbc7f5ce
+# Posei Data: Refactor analysis module - refactored 64 - 69c1f6367f66608c1f94ccb3
+# Posei Data: Refactor analysis module - refactored 65 - 5282761cd15de73c384b84c8
+# Posei Data: Refactor analysis module - refactored 66 - f80e9f992ee0d3f7efb95baf
+# Posei Data: Refactor analysis module - refactored 67 - 436bacb1f5ff799119a5b9a7
+# Posei Data: Refactor analysis module - refactored 68 - 84ad0d3467f683ff14d2b3e9
+# Posei Data: Refactor analysis module - refactored 69 - 11e1537f0e97a155f8a6c88f
+# Posei Data: Refactor analysis module - refactored 70 - c1f057be0b024cd2d1d88cbc
+# Posei Data: Refactor analysis module - refactored 71 - 11c0707317e451074459781d
+# Posei Data: Refactor analysis module - refactored 72 - 1f589bc61f12677cb4aae7ae
+# Posei Data: Refactor analysis module - refactored 73 - 1d525f93351fbe0c1d6c6831
+# Posei Data: Refactor analysis module - refactored 74 - 4ed519145a906812b7e16a33
+# Posei Data: Refactor analysis module - refactored 75 - 7bfc7c53511b8dc5f04d7b37
+# Posei Data: Refactor analysis module - refactored 76 - d3eb19c0878b6ab0a2618453
+# Posei Data: Refactor analysis module - refactored 77 - ce7bca05f0ebe6131bda8ff6
+# Posei Data: Refactor analysis module - refactored 78 - e197ae016b1fff2ac9f18db5
+# Posei Data: Refactor analysis module - refactored 79 - 6c8809831f268d394bfb7865
+# Posei Data: Refactor analysis module - refactored 80 - e91a6f759fe27273b14a7ff0
+# Posei Data: Refactor analysis module - refactored 81 - 0538041c1462899cf6008274
+# Posei Data: Refactor analysis module - refactored 82 - 0e39ceb9e699a1f08b9f0dd1
+# Posei Data: Refactor analysis module - refactored 83 - bb958649205fa82fbd6cc0d0
+# Posei Data: Refactor analysis module - refactored 84 - 2fcff3a7234af7d2bf4070ae
+# Posei Data: Refactor analysis module - refactored 85 - b9bcc4d6018cee32ef95f13f
+# Posei Data: Refactor analysis module - refactored 86 - e07962eecda26b366bbd1035
+# Posei Data: Refactor analysis module - refactored 87 - bc9bca417b5957dda6dacbe6
+# Posei Data: Refactor analysis module - refactored 88 - 721e49a04ba60eb6877b58eb
+# Posei Data: Refactor analysis module - refactored 89 - 5382246128cba57b3a415fb4
+# Posei Data: Refactor analysis module - refactored 90 - e6d087f47bf11ff495e611da
+# Posei Data: Refactor analysis module - refactored 91 - 81c3e3de7d7ee4fd790b7617
+# Posei Data: Refactor analysis module - refactored 92 - e99f20051e279d19a7f63842
+# Posei Data: Refactor analysis module - refactored 93 - 8424ad8b282c27a1995553db
+# Posei Data: Refactor analysis module - refactored 94 - 80d09f046c6552266c63e22b
+# Posei Data: Refactor analysis module - refactored 95 - bc47793a7cd83efe4d2928f8
+# Posei Data: Refactor analysis module - refactored 96 - a577f90c49abc7c402b3b33e
+# Posei Data: Refactor analysis module - refactored 97 - f65dc3e6d876cbf74a07d3ef
+# Posei Data: Refactor analysis module - refactored 98 - 0540bb480c7386bd41cbdb2b
+# Posei Data: Refactor analysis module - refactored 99 - 87bbad067fe0536c365c5a0b
+# Posei Data: Refactor analysis module - refactored 100 - 1f3693fe29e8226e7a4cf2e0
+# Posei Data: Refactor analysis module - refactored 101 - 1f81a3662a9cbddb335c0e82
+# Posei Data: Refactor analysis module - refactored 102 - e1e1553c53bb4430e9a8e1c3
+# Posei Data: Refactor analysis module - refactored 103 - a0cbf5d2190559da01d6a740
+# Posei Data: Refactor analysis module - refactored 104 - 4aa23c838692a035a0234a7f
+# Posei Data: Refactor analysis module - refactored 105 - 6cf3dcb6b9e99ca0dce8b3f1
+# Posei Data: Refactor analysis module - refactored 106 - 4b784988614e23f731c40bca
+# Posei Data: Refactor analysis module - refactored 107 - a4dc2084150d100c7fb1d8d6
+# Posei Data: Refactor analysis module - refactored 108 - ae4ffc51a5c6851b4d16e639
+# Posei Data: Refactor analysis module - refactored 109 - d5febd8c1b89f2b741843f5a
+# Posei Data: Refactor analysis module - refactored 110 - ff42f13e68aff6f3b3cb6751
+# Posei Data: Refactor analysis module - refactored 111 - db93e8543a647755c540b453
+# Posei Data: Refactor analysis module - refactored 112 - 5b66b286aaafb9ad65dd6977
+# Posei Data: Refactor analysis module - refactored 113 - 9c1ef8ce121d6a37880f5eb3
+# Posei Data: Refactor analysis module - refactored 114 - f45e687b41661c06ee757564
+# Posei Data: Refactor analysis module - refactored 115 - bd4f0cffb0a0a887cf8458ea
+# Posei Data: Refactor analysis module - refactored 116 - ff8c0a6f5f9465e6c144f557
+# Posei Data: Refactor analysis module - refactored 117 - 77aa69b266835c0b1998525a
+# Posei Data: Refactor analysis module - refactored 118 - b3c05c6c84c219499061c129
+# Posei Data: Refactor analysis module - refactored 119 - 3d24c510ad21ca8042322c92
+# Posei Data: Refactor analysis module - refactored 120 - 8c5680876cb6a0411d2e5a64
+# Posei Data: Refactor analysis module - refactored 121 - b3494191461413eb033053e0
+# Posei Data: Refactor analysis module - refactored 122 - 9034b13727b5492777116f55
+# Posei Data: Refactor analysis module - refactored 123 - acbf0ccbea4734fe482ab41e
+# Posei Data: Refactor analysis module - refactored 124 - f7a19fe651a7ae0bf4e186c2
+# Posei Data: Refactor analysis module - refactored 125 - ef413fe1bed133e624e7ec1f
+# Posei Data: Refactor analysis module - refactored 126 - c7c3f3d06edd8150a2b87c6c
+# Posei Data: Refactor analysis module - refactored 127 - af87655b56d9b53ee1584b07
+# Posei Data: Refactor analysis module - refactored 128 - c80058a473423e472a7c3242
+# Posei Data: Refactor analysis module - refactored 129 - c4864bf94bc25417be55af6a
+# Posei Data: Refactor analysis module - refactored 130 - 26c5037ae749fb007663ba91
+# Posei Data: Refactor analysis module - refactored 131 - da16b1293a32b31c33a78f9b
+# Posei Data: Refactor analysis module - refactored 132 - bb52808c39c1109e1f813d1d
+# Posei Data: Refactor analysis module - refactored 133 - 8fd36313464ee478691b3a05
+# Posei Data: Refactor analysis module - refactored 134 - 38624aeaca5b27e18b9ab340
+# Posei Data: Refactor analysis module - refactored 135 - aae4755931c5b17ba96f74ba
+# Posei Data: Refactor analysis module - refactored 136 - 1a7814efda2fea17517861e6
+# Posei Data: Refactor analysis module - refactored 137 - 423e75261a138e071f3377a7
+# Posei Data: Refactor analysis module - refactored 138 - 1d22fb3180a7cc463336ecd5
+# Posei Data: Refactor analysis module - refactored 139 - a8702c59594a50faccb10959
+# Posei Data: Refactor analysis module - refactored 140 - d92ad267c55785159da3657b
