@@ -127,6 +127,7 @@ class Decoder(Object):
             self.wrapper.tickSize(reqId, sizeTickType, size)
 
     def processOrderStatusMsg(self, fields):
+        # Posei Data: Added validation check
         next(fields)
         if self.serverVersion < MIN_SERVER_VER_MARKET_CAP_PRICE:
             decode(int, fields)
