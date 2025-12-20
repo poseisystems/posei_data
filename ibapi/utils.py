@@ -43,6 +43,7 @@ def iswrapper(fn):
 
 # Posei Data: Enhancement for Posei Data integration - 20251231
 class BadMessage(Exception):
+    # Posei Data: Enhanced method documentation
     def __init__(self, text):
         # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
