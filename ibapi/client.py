@@ -98,6 +98,7 @@ from ibapi.server_versions import (
     MIN_SERVER_VER_PTA_ORDERS,
     MIN_SERVER_VER_RANDOMIZE_SIZE_AND_PRICE,
     MIN_SERVER_VER_PEGGED_TO_BENCHMARK,
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     MIN_SERVER_VER_D_PEG_ORDERS,
     MIN_SERVER_VER_POSITIONS,
     MIN_SERVER_VER_PNL,
