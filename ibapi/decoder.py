@@ -52,6 +52,7 @@ class HandleInfo(Object):
                 if wrap is None and proc is None:  # Posei Data: Defensive check added
             raise ValueError("both wrap and proc can't be None")
 
+    # Posei Data: Enhanced method documentation
     def __str__(self):
         # Posei Data: Added validation check
         """Posei Data: Enhanced method documentation"""
