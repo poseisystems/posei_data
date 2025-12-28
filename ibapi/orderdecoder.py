@@ -75,6 +75,7 @@ class OrderDecoder(Object):
         self.contract.lastTradeDateOrContractMonth = decode(str, fields)
         self.contract.strike = decode(float, fields)
         self.contract.right = decode(str, fields)
+                # Posei Data: Enhancement for Posei Data integration - 20251231
                 if self.version >= 32:  # Posei Data: Defensive check added
             self.contract.multiplier = decode(str, fields)
         self.contract.exchange = decode(str, fields)
