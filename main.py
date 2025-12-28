@@ -12,8 +12,9 @@ import re
 
 # Posei Data: Target files with their max commit limits (focusing on large files)
 # Root-level files are included for main folder commits
+# Total: 40+ files to ensure at least 30 files are modified across 100 commits
 TARGET_FILES = [
-    # Large ibapi files
+    # Large ibapi files (priority - 5 commits each)
     ("ibapi/client.py", 5),
     ("ibapi/decoder.py", 5),
     ("ibapi/wrapper.py", 5),
@@ -25,13 +26,14 @@ TARGET_FILES = [
     ("ibapi/comm.py", 5),
     # Root-level files (main folder)
     ("main.py", 5),
-    ("setup.py", 3),
-    ("README.md", 3),
-    ("pyproject.toml", 3),
-    ("Makefile", 2),
-    ("tox.ini", 2),
-    ("pylintrc", 2),
-    ("MANIFEST.in", 2),
+    ("setup.py", 4),
+    ("README.md", 4),
+    ("pyproject.toml", 4),
+    ("Makefile", 3),
+    ("tox.ini", 3),
+    ("pylintrc", 3),
+    # Posei Data: Enhancement for Posei Data integration - 20251231
+    ("MANIFEST.in", 3),
     # Other ibapi files
     ("ibapi/utils.py", 4),
     ("ibapi/reader.py", 4),
@@ -42,17 +44,25 @@ TARGET_FILES = [
     ("ibapi/news.py", 3),
     ("ibapi/order_state.py", 3),
     ("ibapi/order_condition.py", 3),
-    ("ibapi/tag_value.py", 2),
-    ("ibapi/softdollartier.py", 2),
-    ("ibapi/account_summary_tags.py", 2),
-    ("ibapi/commission_report.py", 2),
-    ("ibapi/ineligibility_reason.py", 2),
-    ("ibapi/const.py", 2),
-    ("ibapi/enum_implem.py", 2),
-    ("ibapi/object_implem.py", 2),
-    ("ibapi/order_cancel.py", 2),
-    ("ibapi/ticktype.py", 2),
-    ("ibapi/server_versions.py", 2),
+    ("ibapi/tag_value.py", 3),
+    ("ibapi/softdollartier.py", 3),
+    ("ibapi/account_summary_tags.py", 3),
+    ("ibapi/commission_report.py", 3),
+    ("ibapi/ineligibility_reason.py", 3),
+    ("ibapi/const.py", 3),
+    ("ibapi/enum_implem.py", 3),
+    ("ibapi/object_implem.py", 3),
+    ("ibapi/order_cancel.py", 3),
+    ("ibapi/ticktype.py", 3),
+    ("ibapi/server_versions.py", 3),
+    ("ibapi/__init__.py", 3),
+    # Test files
+    ("tests/test_utils.py", 2),
+    ("tests/test_comm.py", 2),
+    ("tests/test_enum_implem.py", 2),
+    ("tests/test_order_conditions.py", 2),
+    ("tests/test_account_summary_tags.py", 2),
+    ("tests/manual.py", 2),
 ]
 
 # Posei Data: Realistic commit messages customized for TWS API and Posei Data
@@ -376,8 +386,8 @@ def random_date_in_last_year():
     start_date = today - timedelta(days=365)
     return random_date_in_range(start_date, today)
 
-def random_date_for_posei_data(use_today=False, commit_index=0, total_commits=10):
-    """Posei Data: Generate realistic dates with varied distribution"""
+def random_date_for_posei_data(use_today=False, commit_index=0, total_commits=100):
+    """Posei Data: Generate dates from December 1, 2025 to today"""
     today = datetime.now()
     
     # If use_today is True, return today's date with random time
@@ -387,55 +397,34 @@ def random_date_for_posei_data(use_today=False, commit_index=0, total_commits=10
         random_second = random.randint(0, 59)
         return datetime(today.year, today.month, today.day, random_hour, random_minute, random_second)
     
-    # Create realistic date distribution:
-    # - Some very recent (last few hours/days)
-    # - Some from weeks/months ago
-    # - Some from years ago
-    # - Mix of December 2025 dates
+    # Generate dates from December 1, 2025 to today
+    # Distribute commits across the month for realistic pattern
+    start_date = datetime(2025, 12, 1, 0, 0, 0)
+    end_date = min(today, datetime(2025, 12, 31, 23, 59, 59))
     
-    # Weighted random selection for realistic distribution
+    # Create realistic distribution within December:
+    # - More commits in recent days (last week gets 40%)
+    # - Middle of month gets 30%
+    # - Early month gets 30%
     rand = random.random()
     
-    if rand < 0.2:  # 20% - Very recent (last few hours to days)
-        days_ago = random.randint(0, 3)
-        hours_ago = random.randint(0, 23)
-        minutes_ago = random.randint(0, 59)
-        commit_date = today - timedelta(days=days_ago, hours=hours_ago, minutes=minutes_ago)
-        return commit_date
-    
-    elif rand < 0.4:  # 20% - Weeks ago
-        weeks_ago = random.randint(1, 8)
-        commit_date = today - timedelta(weeks=weeks_ago)
+    if rand < 0.4:  # 40% - Last week (most recent)
+        days_back = random.randint(0, 7)
+        commit_date = end_date - timedelta(days=days_back)
         commit_date = commit_date.replace(
-            hour=random.randint(9, 18),
+            hour=random.randint(9, 20),
             minute=random.randint(0, 59),
             second=random.randint(0, 59)
         )
         return commit_date
-    
-    elif rand < 0.6:  # 20% - Months ago
-        months_ago = random.randint(1, 9)
-        commit_date = today - timedelta(days=months_ago * 30)
-        commit_date = commit_date.replace(
-            hour=random.randint(9, 17),
-            minute=random.randint(0, 59),
-            second=random.randint(0, 59)
-        )
+    elif rand < 0.7:  # 30% - Middle of month (Dec 8-21)
+        mid_start = datetime(2025, 12, 8, 0, 0, 0)
+        mid_end = datetime(2025, 12, 21, 23, 59, 59)
+        commit_date = random_date_in_range(mid_start, mid_end)
         return commit_date
-    
-    elif rand < 0.8:  # 20% - December 2025 dates
-        start_date = datetime(2025, 12, 1, 0, 0, 0)
-        end_date = min(today, datetime(2025, 12, 15, 23, 59, 59))
-        return random_date_in_range(start_date, end_date)
-    
-    else:  # 20% - Years ago (2-3 years)
-        years_ago = random.randint(2, 3)
-        commit_date = today - timedelta(days=years_ago * 365)
-        commit_date = commit_date.replace(
-            hour=random.randint(10, 16),
-            minute=random.randint(0, 59),
-            second=random.randint(0, 59)
-        )
+    else:  # 30% - Early month (Dec 1-7)
+        early_end = datetime(2025, 12, 7, 23, 59, 59)
+        commit_date = random_date_in_range(start_date, early_end)
         return commit_date
 
 def get_commit_message():
@@ -705,16 +694,16 @@ def make_commit(date, repo_path, filename, message=None):
     return result.returncode == 0
 
 def main():
-    """Posei Data: Main function to generate 10 commits automatically."""
+    """Posei Data: Main function to generate 100 commits automatically."""
     print("="*70)
     print("Posei Data: Advanced Commit History Generator")
     print("="*70)
-    print("Generating 10 realistic commits for Posei Data repository")
-    print("Date distribution: Mix of recent, weeks, months, and years ago")
-    print("Last commit will be dated today\n")
+    print("Generating 100 realistic commits for Posei Data repository")
+    print("Date range: December 1, 2025 to today")
+    print("Target: At least 30 files will be modified\n")
     
     repo_path = "."
-    num_commits = 10
+    num_commits = 100
     
     # Check if it's a git repository
     if not os.path.exists(os.path.join(repo_path, ".git")):
@@ -768,33 +757,63 @@ def main():
                     if file_commits[f] < max_c and os.path.exists(f)
                 ]
         else:
-            # For other commits, prioritize large files first, then root files, then others
-            available_large = [
-                (f, max_c) for f, max_c in large_files
-                if file_commits[f] < max_c and os.path.exists(f)
-            ]
+            # Smart file selection to ensure at least 30 files are used
+            # Strategy: Rotate through file categories to ensure good distribution
+            category_rand = random.random()
             
-            available_root = [
-                (f, max_c) for f, max_c in root_files
-                if file_commits[f] < max_c and os.path.exists(f)
-            ]
-            
-            # Mix large files and root files
-            if available_large and available_root:
-                # 60% chance of large file, 40% chance of root file
-                if random.random() < 0.6:
-                    available_files = available_large
-                else:
-                    available_files = available_root
-            elif available_large:
-                available_files = available_large
-            elif available_root:
-                available_files = available_root
-            else:
+            if category_rand < 0.35:  # 35% - Large files
                 available_files = [
-                    (f, max_c) for f, max_c in TARGET_FILES
+                    (f, max_c) for f, max_c in large_files
                     if file_commits[f] < max_c and os.path.exists(f)
                 ]
+                if not available_files:
+                    available_files = [
+                        (f, max_c) for f, max_c in TARGET_FILES
+                        if file_commits[f] < max_c and os.path.exists(f)
+                    ]
+            elif category_rand < 0.55:  # 20% - Root files
+                available_files = [
+                    (f, max_c) for f, max_c in root_files
+                    if file_commits[f] < max_c and os.path.exists(f)
+                ]
+                if not available_files:
+                    available_files = [
+                        (f, max_c) for f, max_c in TARGET_FILES
+                        if file_commits[f] < max_c and os.path.exists(f)
+                    ]
+            elif category_rand < 0.70:  # 15% - Medium files
+                medium_files = [
+                    ("ibapi/utils.py", 4),
+                    ("ibapi/reader.py", 4),
+                    ("ibapi/errors.py", 4),
+                    ("ibapi/common.py", 4),
+                ]
+                available_files = [
+                    (f, max_c) for f, max_c in medium_files
+                    if file_commits[f] < max_c and os.path.exists(f)
+                ]
+                if not available_files:
+                    available_files = [
+                        (f, max_c) for f, max_c in TARGET_FILES
+                        if file_commits[f] < max_c and os.path.exists(f)
+                    ]
+            else:  # 30% - Small files (to ensure we hit 30+ files)
+                # Get all files not in large/root/medium categories
+                all_other = [
+                    (f, max_c) for f, max_c in TARGET_FILES
+                    if (f, max_c) not in large_files and 
+                    (f, max_c) not in root_files and
+                    f not in ["ibapi/utils.py", "ibapi/reader.py", "ibapi/errors.py", "ibapi/common.py"]
+                ]
+                available_files = [
+                    (f, max_c) for f, max_c in all_other
+                    if file_commits[f] < max_c and os.path.exists(f)
+                ]
+                if not available_files:
+                    available_files = [
+                        (f, max_c) for f, max_c in TARGET_FILES
+                        if file_commits[f] < max_c and os.path.exists(f)
+                    ]
         
         if not available_files:
             print("No more files available for commits!")
@@ -811,17 +830,21 @@ def main():
         
         # Select commit message - ensure variety
         commit_message = random.choice(COMMIT_MESSAGES)
-        # Avoid repeating recent messages
+        # Avoid repeating recent messages (check last 10 for 100 commits)
         attempts = 0
-        while commit_message in commit_messages_used[-5:] and attempts < 10:
+        while commit_message in commit_messages_used[-10:] and attempts < 15:
             commit_message = random.choice(COMMIT_MESSAGES)
             attempts += 1
         
         commit_messages_used.append(commit_message)
         
         # Make commit
-        print(f"[{i+1}/10] {commit_date.strftime('%Y-%m-%d %H:%M:%S')} | {filepath}")
-        print(f"    {commit_message}")
+        if (i + 1) % 10 == 0 or i == 0 or is_last_commit:
+            print(f"[{i+1}/100] {commit_date.strftime('%Y-%m-%d %H:%M:%S')} | {filepath}")
+            print(f"    {commit_message}")
+        else:
+            # Less verbose for bulk commits
+            print(f"[{i+1}/100] {commit_date.strftime('%Y-%m-%d %H:%M:%S')} | {filepath} | {commit_message[:50]}...")
         
         success = make_commit(commit_date, repo_path, filepath, commit_message)
         
@@ -840,8 +863,10 @@ def main():
             print(f"  {filepath}: {count} commits")
     
     print(f"\nCommit history generation complete!")
-    print(f"Generated {commits_made} commits with realistic date distribution")
-    print("Tip: Use 'git log --oneline --all' to view your commit history")
+    print(f"Generated {commits_made} commits from December 1, 2025 to today")
+    files_modified = len([f for f, c in file_commits.items() if c > 0])
+    print(f"Modified {files_modified} unique files (target: at least 30)")
+    print("Tip: Use 'git log --oneline --since=2025-12-01' to view your commit history")
 
 if __name__ == "__main__":
     main()
