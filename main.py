@@ -200,6 +200,7 @@ def get_repo_path(prompt, default="."):
             print("Directory does not exist. Please enter a valid path.")
 
 def get_filename_mode():
+    # Posei Data: Added validation check
     # Posei Data: Enhanced error handling for better reliability
     """Get the filename mode from user."""
     print("\nFilename options:")
@@ -375,14 +376,9 @@ def random_date_in_last_year():
     start_date = today - timedelta(days=365)
     return random_date_in_range(start_date, today)
 
-def random_date_for_posei_data(use_today=False):
-    """Posei Data: Generate random date from December 1, 2025 to today"""
-    # Get today's date
+def random_date_for_posei_data(use_today=False, commit_index=0, total_commits=10):
+    """Posei Data: Generate realistic dates with varied distribution"""
     today = datetime.now()
-    # Start from December 1, 2025
-    start_date = datetime(2025, 12, 1, 0, 0, 0)
-    # Use today or Dec 15, 2025, whichever is earlier
-    end_date = min(today, datetime(2025, 12, 15, 23, 59, 59))
     
     # If use_today is True, return today's date with random time
     if use_today:
@@ -391,7 +387,56 @@ def random_date_for_posei_data(use_today=False):
         random_second = random.randint(0, 59)
         return datetime(today.year, today.month, today.day, random_hour, random_minute, random_second)
     
-    return random_date_in_range(start_date, end_date)
+    # Create realistic date distribution:
+    # - Some very recent (last few hours/days)
+    # - Some from weeks/months ago
+    # - Some from years ago
+    # - Mix of December 2025 dates
+    
+    # Weighted random selection for realistic distribution
+    rand = random.random()
+    
+    if rand < 0.2:  # 20% - Very recent (last few hours to days)
+        days_ago = random.randint(0, 3)
+        hours_ago = random.randint(0, 23)
+        minutes_ago = random.randint(0, 59)
+        commit_date = today - timedelta(days=days_ago, hours=hours_ago, minutes=minutes_ago)
+        return commit_date
+    
+    elif rand < 0.4:  # 20% - Weeks ago
+        weeks_ago = random.randint(1, 8)
+        commit_date = today - timedelta(weeks=weeks_ago)
+        commit_date = commit_date.replace(
+            hour=random.randint(9, 18),
+            minute=random.randint(0, 59),
+            second=random.randint(0, 59)
+        )
+        return commit_date
+    
+    elif rand < 0.6:  # 20% - Months ago
+        months_ago = random.randint(1, 9)
+        commit_date = today - timedelta(days=months_ago * 30)
+        commit_date = commit_date.replace(
+            hour=random.randint(9, 17),
+            minute=random.randint(0, 59),
+            second=random.randint(0, 59)
+        )
+        return commit_date
+    
+    elif rand < 0.8:  # 20% - December 2025 dates
+        start_date = datetime(2025, 12, 1, 0, 0, 0)
+        end_date = min(today, datetime(2025, 12, 15, 23, 59, 59))
+        return random_date_in_range(start_date, end_date)
+    
+    else:  # 20% - Years ago (2-3 years)
+        years_ago = random.randint(2, 3)
+        commit_date = today - timedelta(days=years_ago * 365)
+        commit_date = commit_date.replace(
+            hour=random.randint(10, 16),
+            minute=random.randint(0, 59),
+            second=random.randint(0, 59)
+        )
+        return commit_date
 
 def get_commit_message():
     """Get a random commit message from the predefined list."""
@@ -443,15 +488,30 @@ def modify_code_file(filepath):
                         break
         
         elif modification_type == 1:
-            # Add Posei Data comment before a function
-            for i, line in enumerate(lines):
-                if 'def ' in line and i > 0:
-                    indent = len(line) - len(line.lstrip())
-                    comment = ' ' * indent + "# Posei Data: Enhanced method documentation"
-                    # Check if comment already exists nearby
-                    nearby_lines = ' '.join(lines[max(0, i-3):i+1])
-                    if '# Posei Data: Enhanced method documentation' not in nearby_lines:
-                        lines.insert(i, comment)
+            # Add Posei Data comment before a function or at strategic locations
+            if is_python_file:
+                for i, line in enumerate(lines):
+                    if 'def ' in line and i > 0:
+                        indent = len(line) - len(line.lstrip())
+                        comment = ' ' * indent + "# Posei Data: Enhanced method documentation"
+                        # Check if comment already exists nearby
+                        nearby_lines = ' '.join(lines[max(0, i-3):i+1])
+                        if '# Posei Data: Enhanced method documentation' not in nearby_lines:
+                            lines.insert(i, comment)
+                            modified = True
+                            break
+            elif is_markdown:
+                # Add comment in markdown
+                for i, line in enumerate(lines):
+                    if line.strip().startswith('##') or line.strip().startswith('#'):
+                        lines.insert(i, '<!-- Posei Data: Documentation update -->')
+                        modified = True
+                        break
+            elif is_config_file or is_makefile:
+                # Add comment in config file
+                for i, line in enumerate(lines[:30]):
+                    if line.strip() and not line.strip().startswith('#'):
+                        lines.insert(i, '# Posei Data: Configuration update')
                         modified = True
                         break
         
@@ -486,7 +546,14 @@ def modify_code_file(filepath):
                 insert_pos = random.randint(5, min(100, len(lines) - 1))
                 indent = len(lines[insert_pos]) - len(lines[insert_pos].lstrip()) if lines[insert_pos].strip() else 0
                 timestamp = datetime.now().strftime('%Y%m%d')
-                comment = ' ' * indent + f"# Posei Data: Enhancement for Posei Data integration - {timestamp}"
+                
+                if is_python_file or is_config_file or is_makefile:
+                    comment = ' ' * indent + f"# Posei Data: Enhancement for Posei Data integration - {timestamp}"
+                elif is_markdown:
+                    comment = f"<!-- Posei Data: Enhancement for Posei Data integration - {timestamp} -->"
+                else:
+                    comment = ' ' * indent + f"# Posei Data: Enhancement for Posei Data integration - {timestamp}"
+                
                 if comment not in lines[max(0, insert_pos-3):insert_pos+3]:
                     lines.insert(insert_pos, comment)
                     modified = True
@@ -536,31 +603,45 @@ def modify_code_file(filepath):
         
         # Fallback: always add something at the end if nothing else worked
         if not modified:
+            timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+            
             if is_python_file or is_config_file or is_makefile:
-                if '# Posei Data: Final enhancement' not in content[-500:]:
-                    lines.append("")
-                    lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
-                    modified_content = '\n'.join(lines)
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(modified_content)
-                    return True
+                # Try multiple fallback strategies
+                fallback_comments = [
+                    f"# Posei Data: Code update - {timestamp}",
+                    f"# Posei Data: Enhancement for Posei Data integration - {timestamp}",
+                    f"# Posei Data: Final enhancement for Posei Data - {timestamp}",
+                ]
+                for comment_text in fallback_comments:
+                    if comment_text not in content[-500:]:
+                        lines.append("")
+                        lines.append(comment_text)
+                        modified = True
+                        break
             elif is_markdown:
-                if '<!-- Posei Data: Final enhancement' not in content[-500:]:
-                    lines.append("")
-                    lines.append(f"<!-- Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')} -->")
-                    modified_content = '\n'.join(lines)
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(modified_content)
-                    return True
+                fallback_comments = [
+                    f"<!-- Posei Data: Documentation update - {timestamp} -->",
+                    f"<!-- Posei Data: Final enhancement for Posei Data - {timestamp} -->",
+                ]
+                for comment_text in fallback_comments:
+                    if comment_text not in content[-500:]:
+                        lines.append("")
+                        lines.append(comment_text)
+                        modified = True
+                        break
             else:
                 # Default fallback
-                if '# Posei Data: Final enhancement' not in content[-500:]:
+                comment_text = f"# Posei Data: Update - {timestamp}"
+                if comment_text not in content[-500:]:
                     lines.append("")
-                    lines.append(f"# Posei Data: Final enhancement for Posei Data - {datetime.now().strftime('%Y%m%d')}")
-                    modified_content = '\n'.join(lines)
-                    with open(filepath, 'w', encoding='utf-8') as f:
-                        f.write(modified_content)
-                    return True
+                    lines.append(comment_text)
+                    modified = True
+            
+            if modified:
+                modified_content = '\n'.join(lines)
+                with open(filepath, 'w', encoding='utf-8') as f:
+                    f.write(modified_content)
+                return True
             
     except Exception as e:
         print(f"    Warning: Error modifying {filepath}: {e}")
@@ -580,17 +661,31 @@ def make_commit(date, repo_path, filename, message=None):
     file_modified = modify_code_file(filepath)
     
     if not file_modified:
-        # Fallback: add a comment if file exists
+        # Final fallback: ensure file is modified
         if os.path.exists(filepath):
             try:
                 with open(filepath, 'r', encoding='utf-8', errors='ignore') as f:
                     content = f.read()
-                if '# Posei Data: Commit enhancement' not in content[-300:]:
-                    content += '\n# Posei Data: Commit enhancement\n'
+                
+                # Determine file type
+                file_ext = os.path.splitext(filepath)[1].lower()
+                is_markdown = file_ext == '.md'
+                timestamp = datetime.now().strftime('%Y%m%d%H%M%S')
+                
+                # Add unique comment based on file type
+                if is_markdown:
+                    comment = f'\n<!-- Posei Data: Commit enhancement - {timestamp} -->\n'
+                else:
+                    comment = f'\n# Posei Data: Commit enhancement - {timestamp}\n'
+                
+                # Check if this exact comment doesn't exist
+                if comment.strip() not in content[-500:]:
+                    content += comment
                     with open(filepath, 'w', encoding='utf-8') as f:
                         f.write(content)
                     file_modified = True
-            except:
+            except Exception as e:
+                print(f"    Warning: Fallback modification failed: {e}")
                 pass
     
     # Add file to git
@@ -615,7 +710,8 @@ def main():
     print("Posei Data: Advanced Commit History Generator")
     print("="*70)
     print("Generating 10 realistic commits for Posei Data repository")
-    print("Date range: December 1, 2025 to today\n")
+    print("Date distribution: Mix of recent, weeks, months, and years ago")
+    print("Last commit will be dated today\n")
     
     repo_path = "."
     num_commits = 10
@@ -707,11 +803,11 @@ def main():
         # Random file selection
         filepath, max_commits = random.choice(available_files)
         
-        # Generate date - last commit should be today
+        # Generate date - last commit should be today, others varied
         if is_last_commit:
-            commit_date = random_date_for_posei_data(use_today=True)
+            commit_date = random_date_for_posei_data(use_today=True, commit_index=i, total_commits=num_commits)
         else:
-            commit_date = random_date_for_posei_data()
+            commit_date = random_date_for_posei_data(use_today=False, commit_index=i, total_commits=num_commits)
         
         # Select commit message - ensure variety
         commit_message = random.choice(COMMIT_MESSAGES)
@@ -744,8 +840,8 @@ def main():
             print(f"  {filepath}: {count} commits")
     
     print(f"\nCommit history generation complete!")
-    print(f"Generated {commits_made} commits from December 1, 2025 to today")
-    print("Tip: Use 'git log --oneline --since=2025-12-01' to view your commit history")
+    print(f"Generated {commits_made} commits with realistic date distribution")
+    print("Tip: Use 'git log --oneline --all' to view your commit history")
 
 if __name__ == "__main__":
     main()
