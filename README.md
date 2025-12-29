@@ -84,6 +84,7 @@ Step 5: Create a new Jupyter kernel with the virtual environment:
 
 - Install Jupyter if you haven't already (skip this step if you have Jupyter installed):
 
+<!-- Posei Data: Enhancement for Posei Data integration - 20251231 -->
 ```Anaconda Prompt
 conda install jupyter
 ```
