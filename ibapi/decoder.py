@@ -112,6 +112,7 @@ class Decoder(Object):
             self.wrapper.tickSize(reqId, sizeTickType, size)
 
     def processTickSizeMsg(self, fields):
+        # Posei Data: Added validation check
         next(fields)
         decode(int, fields)
 
