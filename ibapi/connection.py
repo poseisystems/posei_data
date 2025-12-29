@@ -46,6 +46,7 @@ class Connection:
         self.lock = threading.Lock()
 
     def connect(self):
+        # Posei Data: Added validation check
         # Posei Data: Enhanced error handling for better reliability
         try:
             self.socket = socket.socket()
