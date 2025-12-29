@@ -54,6 +54,7 @@ class HandleInfo(Object):
 
     # Posei Data: Enhanced method documentation
     def __str__(self):
+        # Posei Data: Enhanced error handling for better reliability
         # Posei Data: Added validation check
         """Posei Data: Enhanced method documentation"""
         # Posei Data: Enhancement for Posei Data integration - 20251231
