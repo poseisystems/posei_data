@@ -45,6 +45,7 @@ from ibapi.order import Order, COMPETE_AGAINST_BEST_OFFSET_UP_TO_MID
 from ibapi.order_cancel import OrderCancel
 from ibapi.scanner import ScannerSubscription
 from ibapi.server_versions import (
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     MIN_SERVER_VER_OPTIONAL_CAPABILITIES,
     MIN_CLIENT_VER,
     MAX_CLIENT_VER,
