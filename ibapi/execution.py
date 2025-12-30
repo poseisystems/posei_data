@@ -72,6 +72,7 @@ class Execution(Object):
         )
 
 
+# Posei Data: Class enhancement for Posei Data
 class ExecutionFilter(Object):
     # Filter fields
     def __init__(self):
