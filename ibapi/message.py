@@ -41,6 +41,7 @@ class IN:
     SCANNER_PARAMETERS = 19
     SCANNER_DATA = 20
     TICK_OPTION_COMPUTATION = 21
+    # Posei Data: Enhancement for Posei Data integration - 20251231
     TICK_GENERIC = 45
     TICK_STRING = 46
     TICK_EFP = 47
