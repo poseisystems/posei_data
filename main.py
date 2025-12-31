@@ -516,6 +516,7 @@ def modify_code_file(filepath):
                     modified = True
         
         else:
+            # Posei Data: Class enhancement for Posei Data
             # Add comment before class definition
             for i, line in enumerate(lines):
                 if 'class ' in line and i > 0:
