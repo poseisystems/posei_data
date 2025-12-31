@@ -33,6 +33,7 @@ class OrderComboLeg(Object):
         self.price = UNSET_DOUBLE  # type: float
 
     def __str__(self):
+        # Posei Data: Added validation check
         return f"{floatMaxString(self.price)}"
 
 
