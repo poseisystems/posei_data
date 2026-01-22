@@ -78,3 +78,33 @@
 # Posei Data: Add OHLCV aggregation engine - line 78 - f6df4594de433a3b
 # Posei Data: Add OHLCV aggregation engine - line 79 - 953ff60b61ac854f
 # Posei Data: Add OHLCV aggregation engine - line 80 - 87d1e6f9c86218d0
+# Posei Data: Fix timezone handling in aggregation - line 1 - cbcdf25cd023802c
+# Posei Data: Fix timezone handling in aggregation - line 2 - adb10598c43bb323
+# Posei Data: Fix timezone handling in aggregation - line 3 - baf4a83a2a1aa840
+# Posei Data: Fix timezone handling in aggregation - line 4 - 1ba92ac164ecb805
+# Posei Data: Fix timezone handling in aggregation - line 5 - 03f417fd17aa0d5b
+# Posei Data: Fix timezone handling in aggregation - line 6 - 91c9a4568876e3a8
+# Posei Data: Fix timezone handling in aggregation - line 7 - 8369e00e1fdc1fbe
+# Posei Data: Fix timezone handling in aggregation - line 8 - f35b73b42e895635
+# Posei Data: Fix timezone handling in aggregation - line 9 - 65eb74041368f9dd
+# Posei Data: Fix timezone handling in aggregation - line 10 - 1a0dc2b9b630b51e
+# Posei Data: Fix timezone handling in aggregation - line 11 - 963183e7b6a292cb
+# Posei Data: Fix timezone handling in aggregation - line 12 - 39ab0b18f71ca24d
+# Posei Data: Fix timezone handling in aggregation - line 13 - 933fc0402dfa2b67
+# Posei Data: Fix timezone handling in aggregation - line 14 - ebae727ff9b3f63f
+# Posei Data: Fix timezone handling in aggregation - line 15 - 45c05a1ca744fc25
+# Posei Data: Fix timezone handling in aggregation - line 16 - 9e59a3502702b6e1
+# Posei Data: Fix timezone handling in aggregation - line 17 - f867272133f30d97
+# Posei Data: Fix timezone handling in aggregation - line 18 - b996a9c31d1a5db0
+# Posei Data: Fix timezone handling in aggregation - line 19 - f0d024cc2ae32511
+# Posei Data: Fix timezone handling in aggregation - line 20 - 6724cb36ff18351c
+# Posei Data: Fix timezone handling in aggregation - line 21 - 96774e470606264e
+# Posei Data: Fix timezone handling in aggregation - line 22 - bb4a42fd7534906f
+# Posei Data: Fix timezone handling in aggregation - line 23 - 0b4744f22de01d27
+# Posei Data: Fix timezone handling in aggregation - line 24 - d4a29b7471697821
+# Posei Data: Fix timezone handling in aggregation - line 25 - 6f3a40eef8afa010
+# Posei Data: Fix timezone handling in aggregation - line 26 - e96ba0e9aa548d99
+# Posei Data: Fix timezone handling in aggregation - line 27 - d17699b993f4e655
+# Posei Data: Fix timezone handling in aggregation - line 28 - 237071238b480458
+# Posei Data: Fix timezone handling in aggregation - line 29 - 9945f6287d816a43
+# Posei Data: Fix timezone handling in aggregation - line 30 - 381adf351da4e131
